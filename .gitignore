@@ -1,0 +1,17 @@
+*-cache
+*.cache
+*.log
+/production
+production
+build
+*-backups
+*.backups
+*.bak
+todo
+temp
+local
+~*.lck
+*.kate-swp
+fp-info-cache
+fp-lib-table
+sym-lib-table

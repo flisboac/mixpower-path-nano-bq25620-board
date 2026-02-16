@@ -1,0 +1,7 @@
+# Changes here will be overwritten by Copier
+_commit: v0.1.4
+_src_path: https://github.com/flisboac/jlcpcb-2layer-kicad-project-template
+main_kicad_project_name: mixpower-path-tiny-board-r1
+mixlib_kicad_clone_url: https://github.com/flisboac/mixlib-kicad.git
+project_layout: multi
+project_name: mixpower-path-tiny-board

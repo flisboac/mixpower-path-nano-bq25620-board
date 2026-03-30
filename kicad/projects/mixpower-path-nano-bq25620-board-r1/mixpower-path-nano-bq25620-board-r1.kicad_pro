@@ -3,6 +3,8 @@
     "3dviewports": [],
     "design_settings": {
       "defaults": {
+        "apply_defaults_to_fp_barcodes": false,
+        "apply_defaults_to_fp_dimensions": false,
         "apply_defaults_to_fp_fields": false,
         "apply_defaults_to_fp_shapes": false,
         "apply_defaults_to_fp_text": false,
@@ -82,6 +84,7 @@
         "extra_footprint": "warning",
         "footprint": "error",
         "footprint_filters_mismatch": "ignore",
+        "footprint_symbol_field_mismatch": "warning",
         "footprint_symbol_mismatch": "warning",
         "footprint_type_mismatch": "ignore",
         "hole_clearance": "error",
@@ -99,6 +102,7 @@
         "mirrored_text_on_front_layer": "warning",
         "missing_courtyard": "ignore",
         "missing_footprint": "warning",
+        "missing_tuning_profile": "warning",
         "net_conflict": "warning",
         "nonmirrored_text_on_back_layer": "warning",
         "npth_inside_courtyard": "ignore",
@@ -118,9 +122,12 @@
         "too_many_vias": "error",
         "track_angle": "error",
         "track_dangling": "warning",
+        "track_not_centered_on_via": "ignore",
+        "track_on_post_machined_layer": "error",
         "track_segment_length": "error",
         "track_width": "error",
         "tracks_crossing": "error",
+        "tuning_profile_track_geometries": "ignore",
         "unconnected_items": "error",
         "unresolved_variable": "error",
         "via_dangling": "warning",
@@ -260,17 +267,28 @@
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
+      "bom_rev": "",
       "dist": "",
       "distpn": "",
       "internal_id": "",
       "mfg": "",
-      "mpn": ""
+      "mpn": "",
+      "sch_revision": ""
     },
     "layer_pairs": [],
     "layer_presets": [],
     "viewports": []
   },
   "boards": [],
+  "component_class_settings": {
+    "assignments": [],
+    "meta": {
+      "version": 0
+    },
+    "sheet_component_classes": {
+      "enabled": false
+    }
+  },
   "cvpcb": {
     "equivalence_files": []
   },
@@ -469,11 +487,14 @@
       "duplicate_sheet_names": "error",
       "endpoint_off_grid": "warning",
       "extra_units": "error",
+      "field_name_whitespace": "warning",
       "footprint_filter": "ignore",
       "footprint_link_issues": "warning",
       "four_way_junction": "ignore",
       "global_label_dangling": "warning",
+      "ground_pin_not_ground": "warning",
       "hier_label_mismatch": "error",
+      "isolated_pin_label": "warning",
       "label_dangling": "error",
       "label_multiple_wires": "warning",
       "lib_symbol_issues": "warning",
@@ -496,6 +517,7 @@
       "similar_power": "warning",
       "simulation_model_issue": "ignore",
       "single_global_label": "ignore",
+      "stacked_pin_name": "warning",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
       "undefined_netclass": "error",
@@ -509,7 +531,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "mixpower-path-mini-bq25672-lv-board-r1.kicad_pro",
+    "filename": "mixpower-path-mini-bq25620-board-r1.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -528,6 +550,7 @@
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.1016,
+        "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
@@ -536,7 +559,8 @@
         "name": "Analog",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 1,
-        "schematic_color": "rgb(0, 132, 132)"
+        "schematic_color": "rgb(0, 132, 132)",
+        "tuning_profile": ""
       },
       {
         "diff_pair_gap": 0.1524,
@@ -544,20 +568,23 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
         "schematic_color": "rgb(0, 194, 194)",
-        "track_width": 0.1524
+        "track_width": 0.1524,
+        "tuning_profile": ""
       },
       {
         "name": "Digital",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 3,
         "schematic_color": "rgb(0, 0, 194)",
-        "track_width": 0.3
+        "track_width": 0.3,
+        "tuning_profile": ""
       },
       {
         "name": "GPIO",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2,
-        "schematic_color": "rgb(0, 0, 132)"
+        "schematic_color": "rgb(0, 0, 132)",
+        "tuning_profile": ""
       },
       {
         "bus_width": 18,
@@ -567,6 +594,7 @@
         "priority": 7,
         "schematic_color": "rgb(255, 0, 0)",
         "track_width": 1.524,
+        "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 12
@@ -579,6 +607,7 @@
         "priority": 11,
         "schematic_color": "rgb(255, 0, 0)",
         "track_width": 1.778,
+        "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 12
@@ -591,6 +620,7 @@
         "priority": 4,
         "schematic_color": "rgb(204, 102, 0)",
         "track_width": 0.1524,
+        "tuning_profile": "",
         "via_diameter": 0.4,
         "via_drill": 0.2,
         "wire_width": 8
@@ -603,6 +633,7 @@
         "priority": 8,
         "schematic_color": "rgb(204, 102, 0)",
         "track_width": 0.1524,
+        "tuning_profile": "",
         "via_diameter": 0.4,
         "via_drill": 0.2,
         "wire_width": 8
@@ -615,6 +646,7 @@
         "priority": 5,
         "schematic_color": "rgb(221, 133, 0)",
         "track_width": 0.381,
+        "tuning_profile": "",
         "via_diameter": 0.4,
         "via_drill": 0.2,
         "wire_width": 8
@@ -627,6 +659,7 @@
         "priority": 6,
         "schematic_color": "rgb(255, 153, 0)",
         "track_width": 0.762,
+        "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 10
@@ -639,6 +672,7 @@
         "priority": 9,
         "schematic_color": "rgb(221, 133, 0)",
         "track_width": 0.381,
+        "tuning_profile": "",
         "via_diameter": 0.4,
         "via_drill": 0.2,
         "wire_width": 8
@@ -651,13 +685,14 @@
         "priority": 10,
         "schematic_color": "rgb(255, 153, 0)",
         "track_width": 0.762,
+        "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 10
       }
     ],
     "meta": {
-      "version": 4
+      "version": 5
     },
     "net_colors": null,
     "netclass_assignments": null,
@@ -676,55 +711,55 @@
       },
       {
         "netclass": "Digital",
-        "pattern": "(/.*/)?.*_?(RX(_?TX)?|TX(_?RX)?)\\d?(_TR)?"
+        "pattern": "/?(.*/)?.*_?(RX(_?TX)?|TX(_?RX)?)\\d?(_TR)?"
       },
       {
         "netclass": "Digital",
-        "pattern": "(/.*/)?(.*_)?(MISO|MOSI|SDI|SDO|SD|WS)(_TR)?"
+        "pattern": "/?(.*/)?(.*_)?(MISO|MOSI|SDI|SDO|SD|WS)(_TR)?"
       },
       {
         "netclass": "Digital",
-        "pattern": "(/.*/)?(.*_)?(SCK|CLK|CLOCK|MCK)(_TR)?"
+        "pattern": "/?(.*/)?(.*_)?(SCK|CLK|CLOCK|MCK)(_TR)?"
       },
       {
         "netclass": "Digital",
-        "pattern": "(/.*/)?(.*_)?DATA(_TR)?"
+        "pattern": "/?(.*/)?(.*_)?DATA(_TR)?"
       },
       {
         "netclass": "Digital",
-        "pattern": "(/.*/)?(~\\{)?(.*_)?D(ATA_)?(IN?|O(UT)?|IO)?(_TR)?"
+        "pattern": "/?(.*/)?(~\\{)?(.*_)?D(ATA_)?(IN?|O(UT)?|IO)?(_TR)?"
       },
       {
         "netclass": "Digital",
-        "pattern": "(/.*/)?(~\\{)?(.*_)?(SWCLK|SWDIO|TD(I|O)|T(MS|CK))(_TR)?"
+        "pattern": "/?(.*/)?(~\\{)?(.*_)?(SWCLK|SWDIO|TD(I|O)|T(MS|CK))(_TR)?"
       },
       {
         "netclass": "GPIO",
-        "pattern": ")?(.*_)?(GP|P[A-Z]|B(T|TN)?)\\d+\\"
+        "pattern": "/?(.*_)?(GP|P[A-Z]|B(T|TN)?)\\d+\\"
       },
       {
         "netclass": "GPIO",
-        "pattern": ")?(.*_)?([nN](S|T))?(CE|INT|IRQ|EN|RST|FLT|FAULT)(_.*)?\\"
+        "pattern": "/?(.*_)?([nN](S|T))?(CE|INT|IRQ|EN|DIS|RST|FLT|FAULT|MODE|_ST|_SNS|_SENSE)(_.*)?\\"
       },
       {
         "netclass": "HighPwrLowVolt_5A_30V",
-        "pattern": "(/.*/)?V(BUS|EXT|AC1|AC2|SEL|OTG|SYS|SWN)\\d*(_.*(?<!_EN|_FB|_PG|_FLT|_FAULT|_G|_P))?"
+        "pattern": "/?(.*/)?V(BUS|EXT|AC1|AC2|SEL|OTG|SYS|SWN)\\d*(_.*(?<!_EN|_DIS|_FB|_PG|_FLT|_FAULT|_G|_P|_MODE|_ST|_SNS|_SENSE))?"
       },
       {
         "netclass": "LowPwrLowVolt_1A_30V",
-        "pattern": "(/.*/)?V(?!BUS|EXT|AC1|AC2|SEL|OTG|SYS|SWN)[a-zA-Z]+\\d*_?LP(_.*(?<!_EN|_FB|_PG|_FLT|_FAULT|_G|_P))?"
+        "pattern": "/?(.*/)?V(?!BUS|EXT|AC1|AC2|SEL|OTG|SYS|SWN)[a-zA-Z]+\\d*_?LP(_.*(?<!_EN|_DIS|_FB|_PG|_FLT|_FAULT|_G|_P|_MODE|_ST|_SNS|_SENSE))?"
       },
       {
         "netclass": "LowPwrLowVolt_1A_30V",
-        "pattern": "(/.*/)?\\d+V\\d*_?LP(_.*(?<!_EN|_FB|_PG|_FLT|_FAULT|_G|_P))?"
+        "pattern": "/?(.*/)?\\d+V\\d*_?LP(_.*(?<!_EN|_DIS|_FB|_PG|_FLT|_FAULT|_G|_P|_MODE|_ST|_SNS|_SENSE))?"
       },
       {
         "netclass": "MidPwrLowVolt_3A_30V",
-        "pattern": "(/.*/)?(V(?!BUS|EXT|AC1|AC2|SEL|OTG|SYS|SWN)[a-zA-Z]+\\d*(?<!LP|_LP))(_.*(?<!_EN|_FB|_PG|_FLT|_FAULT|_G|_P))?"
+        "pattern": "/?(.*/)?(V(?!BUS|EXT|AC1|AC2|SEL|OTG|SYS|SWN)[a-zA-Z]+\\d*(?<!LP|_LP))(_.*(?<!_EN|_DIS|_FB|_PG|_FLT|_FAULT|_G|_P|_MODE|_ST|_SNS|_SENSE))?"
       },
       {
         "netclass": "MidPwrLowVolt_3A_30V",
-        "pattern": "(/.*/)?(\\d+V\\d*(?<!LP|_LP))(_.*(?<!_EN|_FB|_PG|_FLT|_FAULT|_G|_P))?"
+        "pattern": "/?(.*/)?(\\d+V\\d*(?<!LP|_LP))(_.*(?<!_EN|_DIS|_FB|_PG|_FLT|_FAULT|_G|_P|_MODE|_ST|_SNS|_SENSE))?"
       }
     ]
   },
@@ -744,6 +779,10 @@
   },
   "schematic": {
     "annotate_start_num": 0,
+    "annotation": {
+      "method": 0,
+      "sort_order": 0
+    },
     "bom_export_filename": "${PROJECTNAME}.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
@@ -815,6 +854,7 @@
       "sort_asc": true,
       "sort_field": "Reference"
     },
+    "bus_aliases": {},
     "connection_grid_size": 50.0,
     "drawing": {
       "dashed_lines_dash_length_ratio": 12.0,
@@ -822,6 +862,7 @@
       "default_line_thickness": 6.0,
       "default_text_size": 40.0,
       "field_names": [],
+      "hop_over_size_choice": 0,
       "intersheets_ref_own_page": false,
       "intersheets_ref_prefix": "",
       "intersheets_ref_short": true,
@@ -853,6 +894,7 @@
     },
     "page_layout_descr_file": "",
     "plot_directory": "plot/",
+    "reuse_designators": true,
     "space_save_all_events": true,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
@@ -861,51 +903,52 @@
     "spice_save_all_dissipations": false,
     "spice_save_all_voltages": false,
     "subpart_first_id": 65,
-    "subpart_id_separator": 0
+    "subpart_id_separator": 0,
+    "top_level_sheets": [
+      {
+        "filename": "mixpower-path-mini-bq25620-board-r1.kicad_sch",
+        "name": "mixpower-path-mini-bq25620-board-r1",
+        "uuid": "2e43857b-9bf9-460c-948c-ec2cf8a8d6b4"
+      }
+    ],
+    "used_designators": "TP1-10,SW1-3,J1-11,#FLG1-2,#PWR1-99,C1-55,U1-14,D1-11,F1,Q1-9,H1-3,JP1-12,R1-78,FB1-2,L1-3,RV1",
+    "variants": []
   },
   "sheets": [
     [
       "2e43857b-9bf9-460c-948c-ec2cf8a8d6b4",
-      "Root"
+      "mixpower-path-mini-bq25620-board-r1"
     ],
     [
-      "a96c4826-4f7b-4932-9621-9f42d0f49b09",
-      "input-usb"
+      "608727b1-1145-4b7c-8484-0a77632bac85",
+      "input-vbus"
     ],
     [
-      "7979e167-2bba-4fab-b04a-4b73a0d2689b",
-      "input-battery"
+      "6001cb85-d41b-42c1-92e6-5ea203f2bda3",
+      "input-vbat"
     ],
     [
-      "050b3b40-3e43-4f8a-9f9d-8e85b6cb1fd2",
-      "input-vext"
-    ],
-    [
-      "62cc8ba8-a4a6-4ef3-833b-8755302cfb85",
-      "power-path"
-    ],
-    [
-      "362efeee-2c25-41c6-bfd4-fc15222d8914",
-      "soc-vreg"
-    ],
-    [
-      "02edf1bd-e23a-4a4a-8860-4d5790274652",
-      "util-buttons"
-    ],
-    [
-      "5466418f-b2b4-4596-a9b6-c57ae166d794",
+      "086f65f2-117f-4f65-a186-a8b21110dce9",
       "soc-control"
     ],
     [
-      "0c490263-3bfd-4460-9ca6-8d4376513887",
-      "vpath-vdd1"
+      "ff152d90-3a9a-4696-84f9-0fc6d9a5b4f4",
+      "util-buttons"
     ],
     [
-      "48666261-bb79-4da6-aeba-03c91aeede23",
-      "util-rgb"
+      "8d271180-8087-49c1-be7b-c6bf87d9e09d",
+      "vreg-3v3"
     ],
     [
-      "5c2c325f-e10e-46bb-bd14-248e2a150bcb",
+      "5e68cb4a-dbda-4f40-b949-079f57c58cca",
+      "ppc-bc"
+    ],
+    [
+      "58d5e6bb-811f-45d3-aa67-b144100f4607",
+      "vload-vdd1"
+    ],
+    [
+      "121f6246-4b7d-494d-829b-f1279d4a8ccd",
       "output-headers"
     ]
   ],
@@ -916,5 +959,11 @@
     "MIXLIB_KICAD_SPICE_DIR": "${KIPRJMOD}/${MIXLIB_KICAD_BASE_PATH}/spice",
     "MIXLIB_KICAD_SYMBOLS_DIR": "${KIPRJMOD}/${MIXLIB_KICAD_BASE_PATH}/symbols",
     "_PROJECT_ROOT": "${KIPRJMOD}/../../.."
+  },
+  "tuning_profiles": {
+    "meta": {
+      "version": 0
+    },
+    "tuning_profiles_impedance_geometric": []
   }
 }

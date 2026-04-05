@@ -22916,6 +22916,19 @@
 				)
 			)
 		)
+		(property "SKU" "DFE201612E-R47M=P2"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "44f46023-3e81-4e66-b7fd-1a97f665fd24")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Choke_* *Coil* Inductor_* L_*")
 		(path "/8d271180-8087-49c1-be7b-c6bf87d9e09d/97fb9576-56f3-41b9-8fb6-0df44e954b0c")
 		(sheetname "/vreg-3v3/")

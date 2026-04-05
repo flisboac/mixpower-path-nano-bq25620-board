@@ -4,6 +4,11 @@
 	(generator_version "10.0")
 	(uuid "2e43857b-9bf9-460c-948c-ec2cf8a8d6b4")
 	(paper "A4")
+	(title_block
+		(title "mixpower-path-nano-bq25620-board")
+		(date "2026-04-05")
+		(rev "R1")
+	)
 	(lib_symbols
 		(symbol "Connector:USB_C_Receptacle_USB2.0_16P"
 			(pin_names
@@ -4571,12 +4576,12 @@
 		)
 		(uuid "4158668d-828b-4307-adc1-3e8fd538d19d")
 	)
-	(text "* On battery, 5V can only be provided by OTG mode.\n* ADC enablement is necessary for measurement of voltages (VBUS, VBAT) and currents (IBUS and IBAT)."
+	(text "* On battery, 5V can only be provided by OTG mode.\n* ADC enablement is necessary only for measurement of voltages (VBUS, VBAT) and currents (IBUS and IBAT)."
 		(exclude_from_sim no)
-		(at 16.51 160.02 0)
+		(at 12.7 161.29 0)
 		(effects
 			(font
-				(size 0.7112 0.7112)
+				(size 1.016 1.016)
 				(color 72 72 72 1)
 			)
 			(justify left)
@@ -4772,12 +4777,6 @@
 		(uuid "0d7a389a-aae9-4bd2-a790-c66035325a67")
 	)
 	(junction
-		(at 71.12 118.11)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "11f78bf9-1773-4eee-8e31-49316d034f8e")
-	)
-	(junction
 		(at 121.92 30.48)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4854,6 +4853,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "32360fc2-3b20-4865-85a5-d02789dad2eb")
+	)
+	(junction
+		(at 59.69 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "33e1e41c-b0bd-4b11-9867-010edf3a8e2d")
 	)
 	(junction
 		(at 1065.53 654.05)
@@ -4934,6 +4939,12 @@
 		(uuid "73672bbf-c52d-4dd3-b89b-3239e4f1fec5")
 	)
 	(junction
+		(at 68.58 118.11)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "74646146-feb1-45a8-93c9-4850d0ba58e0")
+	)
+	(junction
 		(at 135.89 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4962,12 +4973,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a11b3faa-c3fd-4790-a80e-14fe43057539")
-	)
-	(junction
-		(at 68.58 81.28)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a2aedba9-083d-4e38-9f02-457fd26f41cf")
 	)
 	(junction
 		(at 1173.48 685.8)
@@ -5018,16 +5023,22 @@
 		(uuid "d2b5a446-4e74-4e9c-81ff-891d5c406f43")
 	)
 	(junction
+		(at 62.23 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e2b480cc-14d0-40a2-a5e9-faa49b2c22b9")
+	)
+	(junction
 		(at 1173.48 701.04)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e38ea2d5-a6b6-407d-baa7-2345fc7c3950")
 	)
 	(junction
-		(at 66.04 83.82)
+		(at 170.18 146.05)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "e6ed5f15-bb81-4164-99e7-a9fcbf68b344")
+		(uuid "e5a6c37e-0e07-4af8-b9f5-fdea554bba92")
 	)
 	(junction
 		(at 1005.84 694.69)
@@ -5260,16 +5271,6 @@
 		)
 		(uuid "0816e1ea-9c99-41f2-935d-34c5985ba922")
 	)
-	(wire
-		(pts
-			(xy 71.12 118.11) (xy 71.12 148.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "09f10870-f10f-4fa5-8792-5754a95eba2f")
-	)
 	(polyline
 		(pts
 			(xy 92.71 118.11) (xy 97.79 118.11)
@@ -5321,16 +5322,6 @@
 			(color 128 77 0 1)
 		)
 		(uuid "0c840984-1f21-47fb-8cf9-922e31595f02")
-	)
-	(wire
-		(pts
-			(xy 66.04 83.82) (xy 264.16 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0c850045-f1f4-40ed-bcc2-af2c82d88f55")
 	)
 	(wire
 		(pts
@@ -5509,7 +5500,7 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 81.28) (xy 68.58 128.27)
+			(xy 62.23 81.28) (xy 62.23 128.27)
 		)
 		(stroke
 			(width 0)
@@ -5579,6 +5570,16 @@
 			(color 204 102 0 1)
 		)
 		(uuid "1964edc3-34ac-406d-a7a9-3f2970d59952")
+	)
+	(wire
+		(pts
+			(xy 41.91 157.48) (xy 170.18 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b089aae-c5e4-4b5b-9660-19f3cbbdcc56")
 	)
 	(wire
 		(pts
@@ -6379,16 +6380,6 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 81.28) (xy 264.16 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4dd3d5eb-2384-44c1-8b1b-d447febbf843")
-	)
-	(wire
-		(pts
 			(xy 1007.11 654.05) (xy 1007.11 674.37)
 		)
 		(stroke
@@ -6594,6 +6585,16 @@
 		)
 		(uuid "5d767da7-883a-44e8-a51c-8db6c3608e8d")
 	)
+	(wire
+		(pts
+			(xy 68.58 118.11) (xy 68.58 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e4bf4ea-547d-4e71-b009-37c9f89cf22d")
+	)
 	(polyline
 		(pts
 			(xy 91.44 24.13) (xy 93.98 24.13)
@@ -6698,7 +6699,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 83.82) (xy 66.04 130.81)
+			(xy 59.69 83.82) (xy 59.69 130.81)
 		)
 		(stroke
 			(width 0)
@@ -6890,6 +6891,16 @@
 	)
 	(wire
 		(pts
+			(xy 59.69 83.82) (xy 264.16 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75a1bf3c-d718-49f9-8d2c-c660ae24e008")
+	)
+	(wire
+		(pts
 			(xy 1013.46 681.99) (xy 1066.8 681.99)
 		)
 		(stroke
@@ -6942,7 +6953,7 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 128.27) (xy 76.2 128.27)
+			(xy 62.23 128.27) (xy 76.2 128.27)
 		)
 		(stroke
 			(width 0)
@@ -7087,6 +7098,16 @@
 	)
 	(wire
 		(pts
+			(xy 41.91 125.73) (xy 41.91 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83d9449b-6e05-49a9-b3a2-d6ac630479c1")
+	)
+	(wire
+		(pts
 			(xy 1135.38 664.21) (xy 1139.19 664.21)
 		)
 		(stroke
@@ -7108,7 +7129,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 146.05) (xy 171.45 146.05)
+			(xy 114.3 146.05) (xy 170.18 146.05)
 		)
 		(stroke
 			(width 0)
@@ -7262,7 +7283,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 91.44) (xy 264.16 91.44)
+			(xy 68.58 91.44) (xy 264.16 91.44)
 		)
 		(stroke
 			(width 0)
@@ -7431,7 +7452,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 148.59) (xy 76.2 148.59)
+			(xy 68.58 148.59) (xy 76.2 148.59)
 		)
 		(stroke
 			(width 0)
@@ -7500,16 +7521,6 @@
 			(type default)
 		)
 		(uuid "9bc15acf-6364-412c-b198-cc77c9f2d5c9")
-	)
-	(wire
-		(pts
-			(xy 38.1 118.11) (xy 71.12 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9d11aa6a-533a-4ec8-a2e7-bd6ea6f7f883")
 	)
 	(wire
 		(pts
@@ -8078,7 +8089,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 83.82) (xy 66.04 83.82)
+			(xy 38.1 83.82) (xy 59.69 83.82)
 		)
 		(stroke
 			(width 0)
@@ -8126,6 +8137,16 @@
 			(type default)
 		)
 		(uuid "cafbfdf8-7ba4-4744-901b-6c24a7eb6b53")
+	)
+	(wire
+		(pts
+			(xy 62.23 81.28) (xy 264.16 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb5f88c5-3fc6-4597-a110-480937d54a20")
 	)
 	(wire
 		(pts
@@ -8191,6 +8212,16 @@
 		)
 		(uuid "cf3bd214-5155-44de-9a27-d1f22b23d609")
 	)
+	(wire
+		(pts
+			(xy 170.18 146.05) (xy 170.18 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d0727808-6e34-474b-9337-807c1b9efe79")
+	)
 	(polyline
 		(pts
 			(xy 1187.45 767.08) (xy 1187.45 773.43)
@@ -8222,6 +8253,16 @@
 			(color 128 77 0 1)
 		)
 		(uuid "d0a811d7-afa8-474c-81fb-20f4fec9a448")
+	)
+	(wire
+		(pts
+			(xy 38.1 118.11) (xy 68.58 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d207b6a0-8f94-430f-9946-90fff8b31564")
 	)
 	(wire
 		(pts
@@ -8390,7 +8431,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 91.44) (xy 71.12 118.11)
+			(xy 68.58 91.44) (xy 68.58 118.11)
 		)
 		(stroke
 			(width 0)
@@ -8439,6 +8480,16 @@
 			(color 204 102 0 1)
 		)
 		(uuid "dc72a1e3-4848-4bcd-9026-e300296beb6e")
+	)
+	(wire
+		(pts
+			(xy 170.18 146.05) (xy 171.45 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dddd5fa2-dd9b-4b40-8e47-67d2c9925b56")
 	)
 	(wire
 		(pts
@@ -8520,6 +8571,16 @@
 			(type default)
 		)
 		(uuid "e2e55ae8-062b-46cf-8da0-98f0cd307fcc")
+	)
+	(wire
+		(pts
+			(xy 41.91 125.73) (xy 38.1 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e33fe14f-8d7f-49a2-8b41-f9e451f90dd8")
 	)
 	(polyline
 		(pts
@@ -8649,7 +8710,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 81.28) (xy 68.58 81.28)
+			(xy 38.1 81.28) (xy 62.23 81.28)
 		)
 		(stroke
 			(width 0)
@@ -8753,7 +8814,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 130.81) (xy 76.2 130.81)
+			(xy 59.69 130.81) (xy 76.2 130.81)
 		)
 		(stroke
 			(width 0)
@@ -21022,9 +21083,9 @@
 		)
 		(uuid "e3b036f2-759d-491d-b1f3-8cb1499cf6c8")
 		(cells
-			(table_cell "ESTIMATED QUIESCENTS ON BATTERY ONLY, NO OTG"
+			(table_cell "ESTIMATED QUIESCENTS ON BATTERY ONLY"
 				(exclude_from_sim no)
-				(at 16.51 161.29 0)
+				(at 12.7 163.83 0)
 				(size 90.17 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 5 1)
@@ -21044,7 +21105,7 @@
 			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 29.21 161.29 0)
+				(at 25.4 163.83 0)
 				(size 20.32 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
@@ -21063,7 +21124,7 @@
 			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 49.53 161.29 0)
+				(at 45.72 163.83 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
@@ -21080,7 +21141,7 @@
 			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 68.58 161.29 0)
+				(at 64.77 163.83 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
@@ -21097,7 +21158,7 @@
 			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 87.63 161.29 0)
+				(at 83.82 163.83 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
@@ -21114,7 +21175,7 @@
 			)
 			(table_cell "Section"
 				(exclude_from_sim no)
-				(at 16.51 163.83 0)
+				(at 12.7 166.37 0)
 				(size 12.7 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21133,7 +21194,7 @@
 			)
 			(table_cell "Component"
 				(exclude_from_sim no)
-				(at 29.21 163.83 0)
+				(at 25.4 166.37 0)
 				(size 20.32 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21152,7 +21213,7 @@
 			)
 			(table_cell "Iq (No OTG, No ADC)"
 				(exclude_from_sim no)
-				(at 49.53 163.83 0)
+				(at 45.72 166.37 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21171,7 +21232,7 @@
 			)
 			(table_cell "Iq (No OTG, ADC)"
 				(exclude_from_sim no)
-				(at 68.58 163.83 0)
+				(at 64.77 166.37 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21190,7 +21251,7 @@
 			)
 			(table_cell "Iq (OTG)"
 				(exclude_from_sim no)
-				(at 87.63 163.83 0)
+				(at 83.82 166.37 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21209,7 +21270,7 @@
 			)
 			(table_cell "input-vbat"
 				(exclude_from_sim no)
-				(at 16.51 166.37 0)
+				(at 12.7 168.91 0)
 				(size 12.7 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21226,7 +21287,7 @@
 			)
 			(table_cell "FS312F-G/DW01A"
 				(exclude_from_sim no)
-				(at 29.21 166.37 0)
+				(at 25.4 168.91 0)
 				(size 20.32 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21244,7 +21305,7 @@
 			)
 			(table_cell "3 uA"
 				(exclude_from_sim no)
-				(at 49.53 166.37 0)
+				(at 45.72 168.91 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21261,7 +21322,7 @@
 			)
 			(table_cell "3 uA"
 				(exclude_from_sim no)
-				(at 68.58 166.37 0)
+				(at 64.77 168.91 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21278,7 +21339,7 @@
 			)
 			(table_cell "3 uA"
 				(exclude_from_sim no)
-				(at 87.63 166.37 0)
+				(at 83.82 168.91 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21295,7 +21356,7 @@
 			)
 			(table_cell "input-vbat"
 				(exclude_from_sim no)
-				(at 16.51 168.91 0)
+				(at 12.7 171.45 0)
 				(size 12.7 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21312,7 +21373,7 @@
 			)
 			(table_cell "MAX17055"
 				(exclude_from_sim no)
-				(at 29.21 168.91 0)
+				(at 25.4 171.45 0)
 				(size 20.32 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21330,7 +21391,7 @@
 			)
 			(table_cell "7 uA"
 				(exclude_from_sim no)
-				(at 49.53 168.91 0)
+				(at 45.72 171.45 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21347,7 +21408,7 @@
 			)
 			(table_cell "7 uA"
 				(exclude_from_sim no)
-				(at 68.58 168.91 0)
+				(at 64.77 171.45 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21364,7 +21425,7 @@
 			)
 			(table_cell "7 uA"
 				(exclude_from_sim no)
-				(at 87.63 168.91 0)
+				(at 83.82 171.45 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21381,7 +21442,7 @@
 			)
 			(table_cell "input-vbat"
 				(exclude_from_sim no)
-				(at 16.51 171.45 0)
+				(at 12.7 173.99 0)
 				(size 12.7 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21398,7 +21459,7 @@
 			)
 			(table_cell "Passives"
 				(exclude_from_sim no)
-				(at 29.21 171.45 0)
+				(at 25.4 173.99 0)
 				(size 20.32 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21416,7 +21477,7 @@
 			)
 			(table_cell "0 uA"
 				(exclude_from_sim no)
-				(at 49.53 171.45 0)
+				(at 45.72 173.99 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21433,7 +21494,7 @@
 			)
 			(table_cell "0 uA"
 				(exclude_from_sim no)
-				(at 68.58 171.45 0)
+				(at 64.77 173.99 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21450,7 +21511,7 @@
 			)
 			(table_cell "0 uA"
 				(exclude_from_sim no)
-				(at 87.63 171.45 0)
+				(at 83.82 173.99 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21467,7 +21528,7 @@
 			)
 			(table_cell "input-vbat"
 				(exclude_from_sim no)
-				(at 16.51 173.99 0)
+				(at 12.7 176.53 0)
 				(size 12.7 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21484,7 +21545,7 @@
 			)
 			(table_cell "3157DBV"
 				(exclude_from_sim no)
-				(at 29.21 173.99 0)
+				(at 25.4 176.53 0)
 				(size 20.32 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21502,7 +21563,7 @@
 			)
 			(table_cell "0.6uA"
 				(exclude_from_sim no)
-				(at 49.53 173.99 0)
+				(at 45.72 176.53 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21519,7 +21580,7 @@
 			)
 			(table_cell "0.6uA"
 				(exclude_from_sim no)
-				(at 68.58 173.99 0)
+				(at 64.77 176.53 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21536,7 +21597,7 @@
 			)
 			(table_cell "0.6uA"
 				(exclude_from_sim no)
-				(at 87.63 173.99 0)
+				(at 83.82 176.53 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21553,7 +21614,7 @@
 			)
 			(table_cell "input-vbus"
 				(exclude_from_sim no)
-				(at 16.51 176.53 0)
+				(at 12.7 179.07 0)
 				(size 12.7 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21570,7 +21631,7 @@
 			)
 			(table_cell "TPD8S300A"
 				(exclude_from_sim no)
-				(at 29.21 176.53 0)
+				(at 25.4 179.07 0)
 				(size 20.32 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21588,7 +21649,7 @@
 			)
 			(table_cell "0 (disabled)"
 				(exclude_from_sim no)
-				(at 49.53 176.53 0)
+				(at 45.72 179.07 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21605,7 +21666,7 @@
 			)
 			(table_cell "0 (disabled)"
 				(exclude_from_sim no)
-				(at 68.58 176.53 0)
+				(at 64.77 179.07 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21622,7 +21683,7 @@
 			)
 			(table_cell "0 (disabled)"
 				(exclude_from_sim no)
-				(at 87.63 176.53 0)
+				(at 83.82 179.07 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21639,7 +21700,7 @@
 			)
 			(table_cell "util-button"
 				(exclude_from_sim no)
-				(at 16.51 179.07 0)
+				(at 12.7 181.61 0)
 				(size 12.7 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21656,7 +21717,7 @@
 			)
 			(table_cell "RT9829 (x2)"
 				(exclude_from_sim no)
-				(at 29.21 179.07 0)
+				(at 25.4 181.61 0)
 				(size 20.32 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21674,7 +21735,7 @@
 			)
 			(table_cell "4uA"
 				(exclude_from_sim no)
-				(at 49.53 179.07 0)
+				(at 45.72 181.61 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21691,7 +21752,7 @@
 			)
 			(table_cell "4uA"
 				(exclude_from_sim no)
-				(at 68.58 179.07 0)
+				(at 64.77 181.61 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21708,7 +21769,7 @@
 			)
 			(table_cell "4uA"
 				(exclude_from_sim no)
-				(at 87.63 179.07 0)
+				(at 83.82 181.61 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21725,7 +21786,7 @@
 			)
 			(table_cell "vreg-3v3"
 				(exclude_from_sim no)
-				(at 16.51 181.61 0)
+				(at 12.7 184.15 0)
 				(size 12.7 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21742,7 +21803,7 @@
 			)
 			(table_cell "TPS63802"
 				(exclude_from_sim no)
-				(at 29.21 181.61 0)
+				(at 25.4 184.15 0)
 				(size 20.32 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21760,7 +21821,7 @@
 			)
 			(table_cell "11uA"
 				(exclude_from_sim no)
-				(at 49.53 181.61 0)
+				(at 45.72 184.15 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21777,7 +21838,7 @@
 			)
 			(table_cell "11uA"
 				(exclude_from_sim no)
-				(at 68.58 181.61 0)
+				(at 64.77 184.15 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21794,7 +21855,7 @@
 			)
 			(table_cell "11uA"
 				(exclude_from_sim no)
-				(at 87.63 181.61 0)
+				(at 83.82 184.15 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21811,7 +21872,7 @@
 			)
 			(table_cell "ppc-bc"
 				(exclude_from_sim no)
-				(at 16.51 184.15 0)
+				(at 12.7 186.69 0)
 				(size 12.7 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21828,7 +21889,7 @@
 			)
 			(table_cell "TPS25620"
 				(exclude_from_sim no)
-				(at 29.21 184.15 0)
+				(at 25.4 186.69 0)
 				(size 20.32 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21846,7 +21907,7 @@
 			)
 			(table_cell "1.5uA"
 				(exclude_from_sim no)
-				(at 49.53 184.15 0)
+				(at 45.72 186.69 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21863,7 +21924,7 @@
 			)
 			(table_cell "260uA"
 				(exclude_from_sim no)
-				(at 68.58 184.15 0)
+				(at 64.77 186.69 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21880,7 +21941,7 @@
 			)
 			(table_cell "250uA"
 				(exclude_from_sim no)
-				(at 87.63 184.15 0)
+				(at 83.82 186.69 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21897,7 +21958,7 @@
 			)
 			(table_cell "vload-vdd1"
 				(exclude_from_sim no)
-				(at 16.51 186.69 0)
+				(at 12.7 189.23 0)
 				(size 12.7 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21914,7 +21975,7 @@
 			)
 			(table_cell "Passives, enabled, 5V"
 				(exclude_from_sim no)
-				(at 29.21 186.69 0)
+				(at 25.4 189.23 0)
 				(size 20.32 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21932,7 +21993,7 @@
 			)
 			(table_cell "5uA"
 				(exclude_from_sim no)
-				(at 49.53 186.69 0)
+				(at 45.72 189.23 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21949,7 +22010,7 @@
 			)
 			(table_cell "5uA"
 				(exclude_from_sim no)
-				(at 68.58 186.69 0)
+				(at 64.77 189.23 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21966,7 +22027,7 @@
 			)
 			(table_cell "5uA"
 				(exclude_from_sim no)
-				(at 87.63 186.69 0)
+				(at 83.82 189.23 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21983,7 +22044,7 @@
 			)
 			(table_cell "mcu-control"
 				(exclude_from_sim no)
-				(at 16.51 189.23 0)
+				(at 12.7 191.77 0)
 				(size 12.7 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -22001,7 +22062,7 @@
 			)
 			(table_cell "STM32G071 (Stop 1)"
 				(exclude_from_sim no)
-				(at 29.21 189.23 0)
+				(at 25.4 191.77 0)
 				(size 20.32 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -22019,7 +22080,7 @@
 			)
 			(table_cell "4.1uA"
 				(exclude_from_sim no)
-				(at 49.53 189.23 0)
+				(at 45.72 191.77 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -22036,7 +22097,7 @@
 			)
 			(table_cell "4.1uA"
 				(exclude_from_sim no)
-				(at 68.58 189.23 0)
+				(at 64.77 191.77 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -22053,7 +22114,7 @@
 			)
 			(table_cell "4.1uA"
 				(exclude_from_sim no)
-				(at 87.63 189.23 0)
+				(at 83.82 191.77 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -22070,7 +22131,7 @@
 			)
 			(table_cell "TOTAL"
 				(exclude_from_sim no)
-				(at 16.51 191.77 0)
+				(at 12.7 194.31 0)
 				(size 33.02 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 2 1)
@@ -22091,7 +22152,7 @@
 			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 29.21 191.77 0)
+				(at 25.4 194.31 0)
 				(size 20.32 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
@@ -22110,7 +22171,7 @@
 			)
 			(table_cell "36.2 uA"
 				(exclude_from_sim no)
-				(at 49.53 191.77 0)
+				(at 45.72 194.31 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -22130,7 +22191,7 @@
 			)
 			(table_cell "294.7uA"
 				(exclude_from_sim no)
-				(at 68.58 191.77 0)
+				(at 64.77 194.31 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -22150,7 +22211,7 @@
 			)
 			(table_cell "284.7uA"
 				(exclude_from_sim no)
-				(at 87.63 191.77 0)
+				(at 83.82 194.31 0)
 				(size 19.05 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -26442,7 +26503,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "sheets/soc-control.kicad_sch"
+		(property "Sheetfile" "subsheet__soc-control.kicad_sch"
 			(at 203.2 66.6246 0)
 			(hide yes)
 			(show_name no)
@@ -26667,7 +26728,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4"
-					(page "4")
+					(page "7")
 				)
 			)
 		)
@@ -26699,7 +26760,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "sheets/output-headers.kicad_sch"
+		(property "Sheetfile" "subsheet__output-headers.kicad_sch"
 			(at 264.16 154.2546 0)
 			(hide yes)
 			(show_name no)
@@ -26914,7 +26975,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4"
-					(page "11")
+					(page "9")
 				)
 			)
 		)
@@ -26946,7 +27007,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "sheets/vload-vdd1.kicad_sch"
+		(property "Sheetfile" "subsheet__vload-vdd1.kicad_sch"
 			(at 203.2 154.2546 0)
 			(hide yes)
 			(show_name no)
@@ -27053,7 +27114,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "sheets/ppc-bc.kicad_sch"
+		(property "Sheetfile" "subsheet__ppc-bc.kicad_sch"
 			(at 76.2 154.2546 0)
 			(hide yes)
 			(show_name no)
@@ -27208,7 +27269,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4"
-					(page "7")
+					(page "4")
 				)
 			)
 		)
@@ -27240,7 +27301,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "sheets/input-vbat.kicad_sch"
+		(property "Sheetfile" "subsheet__input-vbat.kicad_sch"
 			(at 12.7 144.0946 0)
 			(hide yes)
 			(show_name no)
@@ -27312,6 +27373,16 @@
 				(justify right)
 			)
 		)
+		(pin "VCC" input
+			(at 38.1 125.73 0)
+			(uuid "9ebf2da4-9242-49be-993e-9c64d7afe8e0")
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4"
@@ -27347,7 +27418,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "sheets/input-vbus.kicad_sch"
+		(property "Sheetfile" "subsheet__input-vbus.kicad_sch"
 			(at 12.7 92.0246 0)
 			(hide yes)
 			(show_name no)
@@ -27514,7 +27585,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "sheets/vreg-3v3.kicad_sch"
+		(property "Sheetfile" "subsheet__vreg-3v3.kicad_sch"
 			(at 139.7 128.8546 0)
 			(hide yes)
 			(show_name no)
@@ -27569,7 +27640,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4"
-					(page "6")
+					(page "5")
 				)
 			)
 		)
@@ -27601,7 +27672,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "sheets/util-buttons.kicad_sch"
+		(property "Sheetfile" "subsheet__util-buttons.kicad_sch"
 			(at 88.9 33.6046 0)
 			(hide yes)
 			(show_name no)
@@ -27676,7 +27747,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4"
-					(page "5")
+					(page "6")
 				)
 			)
 		)

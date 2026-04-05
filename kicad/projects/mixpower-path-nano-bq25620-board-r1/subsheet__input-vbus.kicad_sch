@@ -4,6 +4,11 @@
 	(generator_version "10.0")
 	(uuid "b4ed3951-e341-4d56-939e-ff0119d76d27")
 	(paper "A4")
+	(title_block
+		(title "mixpower-path-nano-bq25620-board")
+		(date "2026-04-05")
+		(rev "R1")
+	)
 	(lib_symbols
 		(symbol "Connector:TestPoint_Small"
 			(pin_numbers
@@ -803,7 +808,7 @@
 				)
 			)
 			(property "Datasheet" ""
-				(at 0 0 0)
+				(at 0 -7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -814,7 +819,7 @@
 				)
 			)
 			(property "Description" "Solder Jumper, 2-pole, open"
-				(at 0 0 0)
+				(at 0 -5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -852,7 +857,7 @@
 						(xy -0.254 1.016) (xy -0.254 -1.016)
 					)
 					(stroke
-						(width 0)
+						(width 0.1524)
 						(type default)
 					)
 					(fill
@@ -864,19 +869,7 @@
 					(mid -1.2656 0)
 					(end -0.254 1.016)
 					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -0.254 -1.016)
-					(mid -1.2656 0)
-					(end -0.254 1.016)
-					(stroke
-						(width 0)
+						(width 0.1524)
 						(type default)
 					)
 					(fill
@@ -888,19 +881,7 @@
 					(mid 1.2656 0)
 					(end 0.254 -1.016)
 					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0.254 1.016)
-					(mid 1.2656 0)
-					(end 0.254 -1.016)
-					(stroke
-						(width 0)
+						(width 0.1524)
 						(type default)
 					)
 					(fill
@@ -912,7 +893,7 @@
 						(xy 0.254 1.016) (xy 0.254 -1.016)
 					)
 					(stroke
-						(width 0)
+						(width 0.1524)
 						(type default)
 					)
 					(fill
@@ -922,8 +903,8 @@
 			)
 			(symbol "SolderJumper_2_Open_1_1"
 				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
+					(at -5.08 0 0)
+					(length 3.81)
 					(name "A"
 						(effects
 							(font
@@ -940,8 +921,8 @@
 					)
 				)
 				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
+					(at 5.08 0 180)
+					(length 3.81)
 					(name "B"
 						(effects
 							(font
@@ -2771,7 +2752,7 @@
 	)
 	(rectangle
 		(start 143.51 33.02)
-		(end 167.64 73.66)
+		(end 170.18 73.66)
 		(stroke
 			(width 0)
 			(type dot)
@@ -2795,7 +2776,7 @@
 	)
 	(rectangle
 		(start 44.45 25.4)
-		(end 168.91 154.94)
+		(end 171.45 154.94)
 		(stroke
 			(width 0)
 			(type dash_dot_dot)
@@ -2808,7 +2789,7 @@
 	)
 	(rectangle
 		(start 87.63 33.02)
-		(end 142.24 66.04)
+		(end 142.24 68.58)
 		(stroke
 			(width 0)
 			(type dot)
@@ -2820,7 +2801,7 @@
 	)
 	(rectangle
 		(start 105.41 81.28)
-		(end 167.64 113.03)
+		(end 170.18 113.03)
 		(stroke
 			(width 0)
 			(type dot)
@@ -2868,7 +2849,7 @@
 	)
 	(text "[input-vbus] USB-C Connector: Protections, Filter and VUSB Discharge"
 		(exclude_from_sim no)
-		(at 106.68 29.21 0)
+		(at 107.95 29.21 0)
 		(effects
 			(font
 				(size 2.032 2.032)
@@ -2879,7 +2860,7 @@
 		)
 		(uuid "45f209d5-6109-41c9-bf93-003785bddcae")
 	)
-	(text "* This cuts power for the TPD chip when USB-C is not connected.\n  The TPD*S300A needs to be powered together with the MCU\n  (the USB-PD controller), hence why an external power is\n  necessary, and why it's the same 3.3V from the MCU.\n* The board supports Source and Sink roles, including DRP. The\n  TPD will initially be powered, but considering its rather\n  high quiescent, it is a good idea to turn off the TPD\n  whenever the USB-PD role or MCU's mode of operation allows\n  for it.\n"
+	(text "* This cuts power for the TPD chip when USB-C is not\n  connected. The TPD*S300A needs to be powered together\n  with the MCU (the USB-PD controller), hence why an\n  external power is necessary, and why it's the same\n  3.3V from the MCU.\n* The board supports Source and Sink roles, including\n  DRP. The TPD will initially be powered, but\n  considering its rather high quiescent, it is a good\n  idea to turn off the TPD whenever the USB-PD role\n  or MCU's mode of operation allows for it.\n"
 		(exclude_from_sim no)
 		(at 127 105.41 0)
 		(effects
@@ -2891,9 +2872,9 @@
 		)
 		(uuid "48bca6bd-deb1-43ea-92dd-47413c085bf6")
 	)
-	(text "* ESD protection and filtering.\n* Maybe it needs proper calculation for this Pi-like filter... Or perhaps it matters not.\n* ESD is bidirectional because it's what I have in stock, but it can be replaced with a uni."
+	(text "* ESD protection and filtering.\n* No proper calculation for this Pi-like filter... But perhaps it matters not.\n* ESD is bidirectional because it's what I have in stock, but it can be\n  replaced with a unidirectional one with the same package."
 		(exclude_from_sim no)
-		(at 88.646 63.754 0)
+		(at 88.646 65.024 0)
 		(effects
 			(font
 				(size 0.762 0.762)
@@ -2916,10 +2897,22 @@
 		(uuid "baf8bef3-2e20-4339-8cc6-97c742181b5f")
 	)
 	(junction
-		(at 138.43 128.27)
+		(at 128.27 125.73)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "0c5ad084-22bc-45be-88c8-ed8ab9a600eb")
+		(uuid "09a13e8f-6102-4da7-817f-f5e54205661e")
+	)
+	(junction
+		(at 124.46 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "09e1901c-bd7c-4712-972e-3994645193a7")
+	)
+	(junction
+		(at 160.02 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1633689f-1290-4ed2-9f18-17fd32aee700")
 	)
 	(junction
 		(at 101.6 90.17)
@@ -2934,28 +2927,22 @@
 		(uuid "218b581e-7976-4f39-b80b-18bf2cb7492b")
 	)
 	(junction
-		(at 124.46 97.79)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "22120f9d-2e1b-401c-86af-2aed18b4d3d8")
-	)
-	(junction
 		(at 80.01 132.08)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "22df878b-890b-44a8-86f5-ca80ca70f39e")
 	)
 	(junction
-		(at 49.53 100.33)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2376f4fd-d1fc-487b-9ae6-52731de5757d")
-	)
-	(junction
 		(at 113.03 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "4ce43e32-078a-4816-80d3-7756b3662d77")
+		(uuid "50ae562b-7719-40f8-a7a2-346412f2f2d1")
+	)
+	(junction
+		(at 46.99 102.87)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5651f2f4-d210-4e37-9702-a0f8c58d7a90")
 	)
 	(junction
 		(at 83.82 127)
@@ -2982,12 +2969,6 @@
 		(uuid "662b3fe4-35cb-4d48-8bdf-4f7be438a6c2")
 	)
 	(junction
-		(at 106.68 74.93)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6b2f7f85-5f1c-434c-ba9b-14b5b35fbe69")
-	)
-	(junction
 		(at 115.57 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3000,16 +2981,22 @@
 		(uuid "6d841954-155f-4907-8a7b-a7ff7a8b5d16")
 	)
 	(junction
-		(at 57.15 100.33)
+		(at 116.84 90.17)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "6e68f7b1-e9f9-4b1f-94f1-39e415596e26")
+		(uuid "6dc2bb43-5c47-485f-b43f-329f2abe7e33")
 	)
 	(junction
 		(at 146.05 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "a043843a-5f64-4b86-80bb-78ab33fc228e")
+		(uuid "90e2b809-2471-40ed-a8c8-78cbc3922ebb")
+	)
+	(junction
+		(at 106.68 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "91b592bc-f3df-4154-b480-a07e0f64b7fd")
 	)
 	(junction
 		(at 127 125.73)
@@ -3018,16 +3005,16 @@
 		(uuid "a10bcce2-a8db-4af2-a030-d68c3d9019b8")
 	)
 	(junction
-		(at 128.27 125.73)
+		(at 138.43 128.27)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "acc173e3-17da-47e4-bba7-2aff10623fa8")
+		(uuid "a6112c52-0ffd-47cb-9a52-289e538c85e8")
 	)
 	(junction
-		(at 160.02 62.23)
+		(at 151.13 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "bf08baf9-def5-49a1-aede-a0c9e8f9fce4")
+		(uuid "bb988632-cd44-4d88-873e-2c1199753438")
 	)
 	(junction
 		(at 102.87 44.45)
@@ -3040,6 +3027,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d472b957-aca2-4da9-9b2d-896a3f5b4cd9")
+	)
+	(junction
+		(at 62.23 102.87)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d5407f93-e5f0-4178-bcad-32f52a63fbb9")
 	)
 	(junction
 		(at 86.36 119.38)
@@ -3076,12 +3069,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f83d9179-29af-4288-a373-3da30f84cdc2")
-	)
-	(junction
-		(at 151.13 44.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fa123941-4478-484c-a25b-24b0ef1c55b8")
 	)
 	(junction
 		(at 134.62 44.45)
@@ -3147,7 +3134,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 90.17) (xy 170.18 90.17)
+			(xy 129.54 90.17) (xy 172.72 90.17)
 		)
 		(stroke
 			(width 0)
@@ -3187,7 +3174,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 125.73) (xy 170.18 125.73)
+			(xy 128.27 125.73) (xy 172.72 125.73)
 		)
 		(stroke
 			(width 0)
@@ -3207,7 +3194,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 128.27) (xy 170.18 128.27)
+			(xy 138.43 128.27) (xy 172.72 128.27)
 		)
 		(stroke
 			(width 0)
@@ -3227,13 +3214,33 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 135.89) (xy 114.3 135.89)
+			(xy 62.23 102.87) (xy 62.23 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27b7ca00-01cf-4fca-a1c3-7fd1f6a663ad")
+	)
+	(wire
+		(pts
+			(xy 172.72 135.89) (xy 114.3 135.89)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "27b9f52d-c22d-4013-adea-4f462aec657e")
+	)
+	(wire
+		(pts
+			(xy 46.99 152.4) (xy 172.72 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28564ad0-c1c1-4763-a7a6-332410a8d202")
 	)
 	(wire
 		(pts
@@ -3257,16 +3264,6 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 152.4) (xy 49.53 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "316f255a-f054-423f-a650-4f7d4c108d4c")
-	)
-	(wire
-		(pts
 			(xy 88.9 137.16) (xy 80.01 137.16)
 		)
 		(stroke
@@ -3274,16 +3271,6 @@
 			(type default)
 		)
 		(uuid "325eba33-e14a-4333-ac73-ecd5040dfe7b")
-	)
-	(wire
-		(pts
-			(xy 160.02 62.23) (xy 170.0687 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "34f6e86a-b327-4e01-bad4-64c34f60ed3c")
 	)
 	(wire
 		(pts
@@ -3367,7 +3354,7 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 152.4) (xy 49.53 100.33)
+			(xy 46.99 152.4) (xy 46.99 102.87)
 		)
 		(stroke
 			(width 0)
@@ -3397,7 +3384,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 100.33) (xy 57.15 107.95)
+			(xy 62.23 100.33) (xy 62.23 102.87)
 		)
 		(stroke
 			(width 0)
@@ -3407,7 +3394,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 90.17) (xy 119.38 90.17)
+			(xy 115.57 90.17) (xy 116.84 90.17)
 		)
 		(stroke
 			(width 0)
@@ -3427,7 +3414,17 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 133.35) (xy 114.3 133.35)
+			(xy 49.53 102.87) (xy 46.99 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5532e3c4-d5f3-4218-96d2-b7b74f7333a6")
+	)
+	(wire
+		(pts
+			(xy 172.72 133.35) (xy 114.3 133.35)
 		)
 		(stroke
 			(width 0)
@@ -3477,6 +3474,16 @@
 	)
 	(wire
 		(pts
+			(xy 62.23 100.33) (xy 57.15 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "618c47d6-0731-4ea2-babc-fe8eb65624f2")
+	)
+	(wire
+		(pts
 			(xy 86.36 44.45) (xy 86.36 62.23)
 		)
 		(stroke
@@ -3487,7 +3494,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 74.93) (xy 170.18 74.93)
+			(xy 106.68 74.93) (xy 172.72 74.93)
 		)
 		(stroke
 			(width 0)
@@ -3627,7 +3634,17 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 80.01) (xy 170.18 80.01)
+			(xy 116.84 90.17) (xy 119.38 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a8479a8-d2ff-47fe-bf4b-5854da1359cc")
+	)
+	(wire
+		(pts
+			(xy 113.03 80.01) (xy 172.72 80.01)
 		)
 		(stroke
 			(width 0)
@@ -3715,9 +3732,19 @@
 		)
 		(uuid "9d67538c-a8ef-46dc-9f50-7c8b703c747f")
 	)
+	(wire
+		(pts
+			(xy 46.99 100.33) (xy 49.53 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d828648-dd9e-4e44-8606-17a84092e93f")
+	)
 	(polyline
 		(pts
-			(xy 44.45 31.75) (xy 168.91 31.75)
+			(xy 44.45 31.75) (xy 171.45 31.75)
 		)
 		(stroke
 			(width 0)
@@ -3848,7 +3875,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 44.45) (xy 170.18 44.45)
+			(xy 151.13 44.45) (xy 172.72 44.45)
 		)
 		(stroke
 			(width 0)
@@ -3878,13 +3905,33 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 119.38) (xy 170.18 119.38)
+			(xy 146.05 119.38) (xy 172.72 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "c4a74abb-43fe-4228-b06e-93e8505b03f4")
+	)
+	(wire
+		(pts
+			(xy 46.99 102.87) (xy 46.99 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca696d47-3d47-4268-8e08-08e4147e58dd")
+	)
+	(wire
+		(pts
+			(xy 160.02 62.23) (xy 172.72 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc16c8d7-c473-4857-badf-0030f82e4eb1")
 	)
 	(wire
 		(pts
@@ -3948,6 +3995,16 @@
 	)
 	(wire
 		(pts
+			(xy 62.23 102.87) (xy 59.69 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e11826b2-4325-4334-b9bb-83ccaedc10a2")
+	)
+	(wire
+		(pts
 			(xy 134.62 44.45) (xy 151.13 44.45)
 		)
 		(stroke
@@ -3998,7 +4055,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 97.79) (xy 170.18 97.79)
+			(xy 124.46 97.79) (xy 172.72 97.79)
 		)
 		(stroke
 			(width 0)
@@ -4138,7 +4195,7 @@
 	)
 	(hierarchical_label "SBU2"
 		(shape passive)
-		(at 170.18 135.89 0)
+		(at 172.72 135.89 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -4147,9 +4204,20 @@
 		)
 		(uuid "03ca0164-d842-4f28-8451-b137539a0ebc")
 	)
+	(hierarchical_label "VBUS_DISCH_EN"
+		(shape input)
+		(at 172.72 62.23 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "3ec62db4-3e4f-407f-86d7-8ba28ee4f9f3")
+	)
 	(hierarchical_label "VPWR_EN"
 		(shape input)
-		(at 170.18 97.79 0)
+		(at 172.72 97.79 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -4160,7 +4228,7 @@
 	)
 	(hierarchical_label "D-"
 		(shape passive)
-		(at 170.18 74.93 0)
+		(at 172.72 74.93 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -4171,7 +4239,7 @@
 	)
 	(hierarchical_label "D+"
 		(shape passive)
-		(at 170.18 80.01 0)
+		(at 172.72 80.01 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -4182,7 +4250,7 @@
 	)
 	(hierarchical_label "VPWR"
 		(shape input)
-		(at 170.18 90.17 0)
+		(at 172.72 90.17 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -4193,7 +4261,7 @@
 	)
 	(hierarchical_label "SBU1"
 		(shape passive)
-		(at 170.18 133.35 0)
+		(at 172.72 133.35 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -4204,7 +4272,7 @@
 	)
 	(hierarchical_label "CC1"
 		(shape passive)
-		(at 170.18 125.73 0)
+		(at 172.72 125.73 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -4213,20 +4281,9 @@
 		)
 		(uuid "adec47cd-9dbb-4583-a0a2-f9d659ad186c")
 	)
-	(hierarchical_label "VBUS_DISCH_EN"
-		(shape input)
-		(at 170.0687 62.23 0)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left)
-		)
-		(uuid "c1477661-ec4b-4125-8baa-6ce755532ab1")
-	)
 	(hierarchical_label "VBUS"
 		(shape output)
-		(at 170.18 44.45 0)
+		(at 172.72 44.45 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -4237,7 +4294,7 @@
 	)
 	(hierarchical_label "~{FLT}"
 		(shape output)
-		(at 170.18 119.38 0)
+		(at 172.72 119.38 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -4248,7 +4305,7 @@
 	)
 	(hierarchical_label "SHIELD"
 		(shape passive)
-		(at 170.18 152.4 0)
+		(at 172.72 152.4 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -4259,7 +4316,7 @@
 	)
 	(hierarchical_label "CC2"
 		(shape passive)
-		(at 170.18 128.27 0)
+		(at 172.72 128.27 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -4369,7 +4426,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "096f6cff-3b2e-4cae-82ee-d47b0d308531")
-		(property "Reference" "#PWR043"
+		(property "Reference" "#PWR017"
 			(at 92.71 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -4430,7 +4487,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "#PWR043")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -4447,7 +4504,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "09bc1770-6382-4d25-b48b-7149d880ea0d")
-		(property "Reference" "U5"
+		(property "Reference" "U2"
 			(at 98.6633 111.76 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4568,7 +4625,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "U5")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -4586,7 +4643,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0a469f52-9041-48f0-8816-18330b0b795f")
-		(property "Reference" "#PWR047"
+		(property "Reference" "#PWR021"
 			(at 115.57 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -4647,7 +4704,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "#PWR047")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -4665,7 +4722,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "19bcfeeb-989a-4a94-ace2-817ef55fd1d2")
-		(property "Reference" "#PWR042"
+		(property "Reference" "#PWR016"
 			(at 86.36 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -4726,7 +4783,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "#PWR042")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -4745,7 +4802,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "22d32702-28ea-4a4b-bd2d-37e13952e418")
-		(property "Reference" "J5"
+		(property "Reference" "J2"
 			(at 57.15 55.88 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4852,7 +4909,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "J5")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -4870,7 +4927,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "252f9cdc-6d3d-48b8-9242-2e0740d30ce1")
-		(property "Reference" "C24"
+		(property "Reference" "C9"
 			(at 95.25 93.9862 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4934,7 +4991,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "C24")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -4952,7 +5009,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "27c161d8-5767-4f1d-8e22-c7823a0161e3")
-		(property "Reference" "R29"
+		(property "Reference" "R16"
 			(at 113.03 100.3299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5016,7 +5073,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "R29")
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -5033,7 +5090,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3e66b00d-fa64-4530-8e67-1c2c83b6e981")
-		(property "Reference" "R33"
+		(property "Reference" "R20"
 			(at 162.56 64.7699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5097,7 +5154,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "R33")
+					(reference "R20")
 					(unit 1)
 				)
 			)
@@ -5194,7 +5251,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4eb29440-058e-4cfd-8d17-790915ce5a21")
-		(property "Reference" "Q4"
+		(property "Reference" "Q2"
 			(at 154.94 55.8799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5270,7 +5327,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "Q4")
+					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -5288,7 +5345,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4ecba5fc-8244-4c27-9090-02fbbcfa655f")
-		(property "Reference" "#PWR044"
+		(property "Reference" "#PWR018"
 			(at 101.6 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -5349,7 +5406,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "#PWR044")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -5525,7 +5582,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "52bdf319-5e96-4662-8079-d673794cd2fc")
-		(property "Reference" "R28"
+		(property "Reference" "R15"
 			(at 109.22 46.9899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5589,7 +5646,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "R28")
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -5607,7 +5664,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "55088820-d6de-4444-b4d9-7cbdffa4a6c0")
-		(property "Reference" "C27"
+		(property "Reference" "C12"
 			(at 128.27 54.6162 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5671,7 +5728,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "C27")
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -5767,7 +5824,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "64005b6f-0735-4120-8994-54cacb5d77b7")
-		(property "Reference" "R31"
+		(property "Reference" "R18"
 			(at 128.27 46.9899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5831,7 +5888,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "R31")
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -5839,7 +5896,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 57.15 107.95 0)
+		(at 62.23 107.95 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5849,8 +5906,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "64b35504-0775-4662-8394-9c9a0dc5fd5f")
-		(property "Reference" "#PWR040"
-			(at 57.15 114.3 0)
+		(property "Reference" "#PWR014"
+			(at 62.23 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5861,7 +5918,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 57.15 113.03 0)
+			(at 62.23 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5872,7 +5929,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 57.15 107.95 0)
+			(at 62.23 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5883,7 +5940,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 57.15 107.95 0)
+			(at 62.23 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5894,7 +5951,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 57.15 107.95 0)
+			(at 62.23 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5910,7 +5967,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "#PWR040")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -6008,7 +6065,7 @@
 		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "70741010-6258-4dab-afad-f1b2b7281e75")
-		(property "Reference" "R24"
+		(property "Reference" "R11"
 			(at 81.28 144.7799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6072,7 +6129,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "R24")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -6090,7 +6147,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "78babcc8-f9e1-4363-beb6-70b9bc3cf476")
-		(property "Reference" "#PWR041"
+		(property "Reference" "#PWR015"
 			(at 83.82 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -6151,7 +6208,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "#PWR041")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -6170,7 +6227,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7ae4e861-99e9-48d9-a7aa-9dcd2d42380f")
-		(property "Reference" "#PWR049"
+		(property "Reference" "#PWR023"
 			(at 125.73 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -6231,7 +6288,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "#PWR049")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -6249,7 +6306,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "833e4190-d476-43a6-a8c0-197bcfc7a894")
-		(property "Reference" "#PWR050"
+		(property "Reference" "#PWR024"
 			(at 127 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -6310,7 +6367,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "#PWR050")
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -6327,7 +6384,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "923fd92a-126a-45c4-a7a3-92b47c25f2f9")
-		(property "Reference" "R27"
+		(property "Reference" "R14"
 			(at 96.266 77.47 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6389,7 +6446,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "R27")
+					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -6486,7 +6543,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b37d3ee3-0c0a-473d-bd4e-43ed67f3f7bf")
-		(property "Reference" "C26"
+		(property "Reference" "C11"
 			(at 118.11 144.7862 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6550,7 +6607,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "C26")
+					(reference "C11")
 					(unit 1)
 				)
 			)
@@ -6567,7 +6624,7 @@
 		(in_pos_files yes)
 		(dnp yes)
 		(uuid "b943855a-26ad-4791-a6e5-ab3ae758f3c9")
-		(property "Reference" "R25"
+		(property "Reference" "R12"
 			(at 88.9 144.7799 0)
 			(hide yes)
 			(show_name no)
@@ -6633,7 +6690,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "R25")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -6651,7 +6708,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c21e1d9a-52c4-4bae-af3c-e926d455b25d")
-		(property "Reference" "C28"
+		(property "Reference" "C13"
 			(at 129.54 144.7862 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6715,7 +6772,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "C28")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -6733,7 +6790,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c6de8893-09fe-4e6f-8d1b-0b3031182592")
-		(property "Reference" "C29"
+		(property "Reference" "C14"
 			(at 137.16 50.8062 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6797,7 +6854,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "C29")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -6815,7 +6872,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c9f88fb2-2ff5-4085-beb7-c9ad944ac627")
-		(property "Reference" "#PWR054"
+		(property "Reference" "#PWR028"
 			(at 160.02 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -6876,7 +6933,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "#PWR054")
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -6894,7 +6951,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ce40738b-bebd-4db0-91b4-9574ba7309ea")
-		(property "Reference" "R30"
+		(property "Reference" "R17"
 			(at 121.92 100.3299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6958,7 +7015,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "R30")
+					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -6976,7 +7033,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "daa8f05e-22e1-46f2-9a0b-3a6d9057b960")
-		(property "Reference" "#PWR052"
+		(property "Reference" "#PWR026"
 			(at 137.16 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -7037,7 +7094,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "#PWR052")
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -7055,7 +7112,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "db1c0da9-e0fc-450a-850c-9287831ba549")
-		(property "Reference" "C30"
+		(property "Reference" "C15"
 			(at 139.7 144.7862 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7119,7 +7176,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "C30")
+					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -7136,7 +7193,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "de47a0c7-a57c-4843-879f-a2ce1c5c97f5")
-		(property "Reference" "C25"
+		(property "Reference" "C10"
 			(at 109.22 54.6162 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7200,7 +7257,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "C25")
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -7218,7 +7275,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "df9a2d33-221c-4092-acf3-f3d08cc2c947")
-		(property "Reference" "R32"
+		(property "Reference" "R19"
 			(at 148.59 50.7999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7282,7 +7339,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "R32")
+					(reference "R19")
 					(unit 1)
 				)
 			)
@@ -7300,7 +7357,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e17c5937-c09b-457b-8cd9-ee2e8dbce764")
-		(property "Reference" "#PWR053"
+		(property "Reference" "#PWR027"
 			(at 151.13 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -7361,7 +7418,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "#PWR053")
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -7379,7 +7436,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e54db01d-9cca-4cbe-8305-c646d184c895")
-		(property "Reference" "#PWR045"
+		(property "Reference" "#PWR019"
 			(at 102.87 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -7440,7 +7497,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "#PWR045")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -7459,7 +7516,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e6166697-35b6-4b2c-b079-d652b083fc89")
-		(property "Reference" "#PWR051"
+		(property "Reference" "#PWR025"
 			(at 134.62 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -7520,7 +7577,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "#PWR051")
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
@@ -7537,7 +7594,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ea53d692-f82b-4213-87e7-28e846f13dd1")
-		(property "Reference" "R26"
+		(property "Reference" "R13"
 			(at 96.266 72.644 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7599,25 +7656,27 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "R26")
+					(reference "R13")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Jumper:SolderJumper_2_Open")
-		(at 53.34 100.33 180)
+		(lib_id "power:PWR_FLAG")
+		(at 116.84 90.17 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "ec0e88e2-31ea-48c5-b98e-8d7f2c048f8f")
-		(property "Reference" "JP6"
-			(at 52.07 102.87 0)
+		(uuid "eba97059-e034-4e4c-814e-6b5c2a4cf115")
+		(property "Reference" "#FLG03"
+			(at 116.84 88.265 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7626,18 +7685,19 @@
 				)
 			)
 		)
-		(property "Value" "USB_GND_TO_SHIELD"
-			(at 56.134 104.902 0)
+		(property "Value" "PWR_FLAG"
+			(at 116.84 85.09 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 0.762 0.762)
+					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
-			(at 53.34 100.33 0)
+		(property "Footprint" ""
+			(at 116.84 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7648,7 +7708,83 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 53.34 100.33 0)
+			(at 116.84 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 116.84 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "af35daed-4a14-41ff-b824-872d3f3ef9a5")
+		)
+		(instances
+			(project "mixpower-path-nano-bq25620-board-r1"
+				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
+					(reference "#FLG03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:SolderJumper_2_Open")
+		(at 54.61 102.87 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ec0e88e2-31ea-48c5-b98e-8d7f2c048f8f")
+		(property "Reference" "JP6"
+			(at 54.61 105.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "USB_GND_TO_SHIELD"
+			(at 54.61 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
+			(at 54.61 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 54.61 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7659,7 +7795,7 @@
 			)
 		)
 		(property "Description" "Solder Jumper, 2-pole, open"
-			(at 53.34 100.33 0)
+			(at 54.61 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7696,7 +7832,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ed3a983d-4b5d-43f7-85b0-a11bbcf722a2")
-		(property "Reference" "#PWR048"
+		(property "Reference" "#PWR022"
 			(at 124.46 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -7757,7 +7893,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "#PWR048")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -7775,7 +7911,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f5a0477a-8fe2-4420-9e27-e76e7d70eb60")
-		(property "Reference" "#PWR046"
+		(property "Reference" "#PWR020"
 			(at 111.76 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -7836,7 +7972,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "#PWR046")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -7854,7 +7990,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fb11fd3e-092c-47d7-9f06-c7b2fc50cfc7")
-		(property "Reference" "D8"
+		(property "Reference" "D4"
 			(at 100.33 50.7999 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7918,7 +8054,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "D8")
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -7936,7 +8072,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fc54bad5-4604-40e8-9f12-49fad51e40fa")
-		(property "Reference" "Q4"
+		(property "Reference" "Q2"
 			(at 124.46 83.82 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8010,7 +8146,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
-					(reference "Q4")
+					(reference "Q2")
 					(unit 2)
 				)
 			)

@@ -273,7 +273,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "R1"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -911,7 +911,7 @@
         "uuid": "2e43857b-9bf9-460c-948c-ec2cf8a8d6b4"
       }
     ],
-    "used_designators": "U15-20,Q10,JP13-15,R79-85",
+    "used_designators": "TP1-10,SW1-3,R1-67,R79-85,JP1-15,Q1-7,Q10,F1,#FLG1-7,#PWR1-72,C1-40,U1-11,U15-20,D1-7,H1-3,J1-8,FB1-2,L1-2",
     "variants": []
   },
   "sheets": [
@@ -928,20 +928,20 @@
       "input-vbat"
     ],
     [
-      "086f65f2-117f-4f65-a186-a8b21110dce9",
-      "soc-control"
-    ],
-    [
-      "ff152d90-3a9a-4696-84f9-0fc6d9a5b4f4",
-      "util-buttons"
+      "5e68cb4a-dbda-4f40-b949-079f57c58cca",
+      "ppc-bc"
     ],
     [
       "8d271180-8087-49c1-be7b-c6bf87d9e09d",
       "vreg-3v3"
     ],
     [
-      "5e68cb4a-dbda-4f40-b949-079f57c58cca",
-      "ppc-bc"
+      "ff152d90-3a9a-4696-84f9-0fc6d9a5b4f4",
+      "util-buttons"
+    ],
+    [
+      "086f65f2-117f-4f65-a186-a8b21110dce9",
+      "soc-control"
     ],
     [
       "58d5e6bb-811f-45d3-aa67-b144100f4607",

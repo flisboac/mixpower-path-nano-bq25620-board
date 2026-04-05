@@ -4,6 +4,11 @@
 	(generator_version "10.0")
 	(uuid "b4ed3951-e341-4d56-939e-ff0119d76d27")
 	(paper "A4")
+	(title_block
+		(title "mixpower-path-nano-bq25620-board")
+		(date "2026-04-05")
+		(rev "R1")
+	)
 	(lib_symbols
 		(symbol "Connector:TestPoint_Small"
 			(pin_numbers
@@ -1746,7 +1751,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0be7f1fe-cd1a-4231-848d-51dbe4712dec")
-		(property "Reference" "C43"
+		(property "Reference" "C31"
 			(at 96.52 76.2062 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1810,7 +1815,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
-					(reference "C43")
+					(reference "C31")
 					(unit 1)
 				)
 			)
@@ -1828,7 +1833,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "14879549-92de-4c66-ad80-1c0e4a302af9")
-		(property "Reference" "R63"
+		(property "Reference" "R44"
 			(at 163.83 95.2499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1892,7 +1897,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
-					(reference "R63")
+					(reference "R44")
 					(unit 1)
 				)
 			)
@@ -1909,7 +1914,7 @@
 		(in_pos_files yes)
 		(dnp yes)
 		(uuid "32ff396b-bb8f-4ae3-9a24-bb552ecde86c")
-		(property "Reference" "R58"
+		(property "Reference" "R39"
 			(at 107.95 96.5199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1973,7 +1978,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
-					(reference "R58")
+					(reference "R39")
 					(unit 1)
 				)
 			)
@@ -1991,7 +1996,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "34d79992-0daa-44eb-8c0e-d4b2893dc522")
-		(property "Reference" "C44"
+		(property "Reference" "C32"
 			(at 154.94 77.4762 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2055,7 +2060,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
-					(reference "C44")
+					(reference "C32")
 					(unit 1)
 				)
 			)
@@ -2072,7 +2077,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4c259743-83ef-46c6-ad64-dc827e23aaf9")
-		(property "Reference" "R59"
+		(property "Reference" "R40"
 			(at 107.95 106.6799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2136,7 +2141,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
-					(reference "R59")
+					(reference "R40")
 					(unit 1)
 				)
 			)
@@ -2154,7 +2159,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6157fb22-c60e-4cf2-8f45-ba03c82edc53")
-		(property "Reference" "R62"
+		(property "Reference" "R43"
 			(at 163.83 83.8199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2218,7 +2223,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
-					(reference "R62")
+					(reference "R43")
 					(unit 1)
 				)
 			)
@@ -2236,7 +2241,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "82e389e9-6da4-4a2c-b984-531ee7ff6a93")
-		(property "Reference" "TP10"
+		(property "Reference" "TP8"
 			(at 160.02 111.7599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2297,7 +2302,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
-					(reference "TP10")
+					(reference "TP8")
 					(unit 1)
 				)
 			)
@@ -2315,7 +2320,7 @@
 		(in_pos_files yes)
 		(dnp yes)
 		(uuid "8d4e2b8a-a41c-4a58-bf11-9e5b0a676516")
-		(property "Reference" "R64"
+		(property "Reference" "R45"
 			(at 171.45 90.1699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2379,7 +2384,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
-					(reference "R64")
+					(reference "R45")
 					(unit 1)
 				)
 			)
@@ -2396,7 +2401,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "90d359a1-3b35-46c5-97c6-502c8993d79d")
-		(property "Reference" "R60"
+		(property "Reference" "R41"
 			(at 114.3 86.3599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2460,7 +2465,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
-					(reference "R60")
+					(reference "R41")
 					(unit 1)
 				)
 			)
@@ -2478,7 +2483,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "949c49fa-a281-40bd-83b8-9605efa8c51f")
-		(property "Reference" "R61"
+		(property "Reference" "R42"
 			(at 163.83 77.4699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2542,7 +2547,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
-					(reference "R61")
+					(reference "R42")
 					(unit 1)
 				)
 			)
@@ -2653,7 +2658,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9811d659-66f9-4044-bd56-ee011d95b540")
-		(property "Reference" "#PWR077"
+		(property "Reference" "#PWR046"
 			(at 138.43 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -2714,7 +2719,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
-					(reference "#PWR077")
+					(reference "#PWR046")
 					(unit 1)
 				)
 			)
@@ -2732,7 +2737,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a9a4b207-549d-403e-ac8b-143f9dd77125")
-		(property "Reference" "#PWR079"
+		(property "Reference" "#PWR048"
 			(at 162.56 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -2793,7 +2798,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
-					(reference "#PWR079")
+					(reference "#PWR048")
 					(unit 1)
 				)
 			)
@@ -2811,7 +2816,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b6701c88-18ac-4973-9ef3-d9d7a9ddc908")
-		(property "Reference" "#PWR076"
+		(property "Reference" "#PWR045"
 			(at 109.22 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -2872,7 +2877,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
-					(reference "#PWR076")
+					(reference "#PWR045")
 					(unit 1)
 				)
 			)
@@ -2890,7 +2895,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bd786efd-4a7d-4ea6-a3e3-af0aa8ab7dcc")
-		(property "Reference" "TP9"
+		(property "Reference" "TP7"
 			(at 99.06 95.2499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2951,7 +2956,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
-					(reference "TP9")
+					(reference "TP7")
 					(unit 1)
 				)
 			)
@@ -2969,7 +2974,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c9c1ca59-8309-48b6-9fb5-a41306f02ab8")
-		(property "Reference" "#PWR075"
+		(property "Reference" "#PWR044"
 			(at 99.06 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -3030,7 +3035,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
-					(reference "#PWR075")
+					(reference "#PWR044")
 					(unit 1)
 				)
 			)
@@ -3048,7 +3053,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d6cf449d-d506-439e-ad3a-572fc90ba2a4")
-		(property "Reference" "TP8"
+		(property "Reference" "TP6"
 			(at 99.06 85.0899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3109,7 +3114,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
-					(reference "TP8")
+					(reference "TP6")
 					(unit 1)
 				)
 			)
@@ -3127,7 +3132,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f1bf7967-0841-45e6-b657-023954fa90d7")
-		(property "Reference" "U13"
+		(property "Reference" "U7"
 			(at 127 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3257,7 +3262,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
-					(reference "U13")
+					(reference "U7")
 					(unit 1)
 				)
 			)
@@ -3275,7 +3280,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f6e26722-13bb-462c-b51e-aa3dc5ba852a")
-		(property "Reference" "#PWR078"
+		(property "Reference" "#PWR047"
 			(at 157.48 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -3336,7 +3341,7 @@
 		(instances
 			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
-					(reference "#PWR078")
+					(reference "#PWR047")
 					(unit 1)
 				)
 			)

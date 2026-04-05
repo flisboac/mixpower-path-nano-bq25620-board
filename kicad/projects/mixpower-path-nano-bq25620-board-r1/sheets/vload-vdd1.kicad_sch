@@ -2034,7 +2034,7 @@
 	)
 	(polyline
 		(pts
-			(xy 92.71 64.77) (xy 176.53 64.77)
+			(xy 92.71 64.77) (xy 175.26 64.77)
 		)
 		(stroke
 			(width 0)
@@ -2242,7 +2242,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "3.3k"
+		(property "Value" "1k"
 			(at 162.56 88.8999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2253,7 +2253,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+		(property "Footprint" "Resistor_SMD:R_1210_3225Metric"
 			(at 161.29 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -2293,7 +2293,7 @@
 			(uuid "ca8ae4cf-64d6-4cf7-b29d-8935ac1ab96e")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/58d5e6bb-811f-45d3-aa67-b144100f4607"
 					(reference "R78")
 					(unit 1)
@@ -2310,7 +2310,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "07cb93b0-1d73-4b51-adb0-dc71fa609a4c")
 		(property "Reference" "C55"
 			(at 152.4 77.4762 0)
@@ -2374,7 +2374,7 @@
 			(uuid "449e7ca5-9206-4ab8-ad31-a84ce5f08cd9")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/58d5e6bb-811f-45d3-aa67-b144100f4607"
 					(reference "C55")
 					(unit 1)
@@ -2453,7 +2453,7 @@
 			(uuid "2548bcf6-fc17-4998-83e1-c0e723b13840")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/58d5e6bb-811f-45d3-aa67-b144100f4607"
 					(reference "#PWR095")
 					(unit 1)
@@ -2595,7 +2595,7 @@
 			(uuid "88eef64c-47e6-49a3-8f82-98c5e1bee701")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/58d5e6bb-811f-45d3-aa67-b144100f4607"
 					(reference "Q8")
 					(unit 2)
@@ -2676,7 +2676,7 @@
 			(uuid "f7d731a9-7651-41e4-b58e-f0c0e9295d57")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/58d5e6bb-811f-45d3-aa67-b144100f4607"
 					(reference "R73")
 					(unit 1)
@@ -2755,7 +2755,7 @@
 			(uuid "d106d943-ab0a-4c0d-a104-98e5347888ab")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/58d5e6bb-811f-45d3-aa67-b144100f4607"
 					(reference "#PWR093")
 					(unit 1)
@@ -2773,7 +2773,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "440833e7-afec-4929-9fe6-8b77e0fc0004")
 		(property "Reference" "R76"
@@ -2836,7 +2836,7 @@
 			(uuid "0a1ea949-c9ed-462f-be40-655287e2d128")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/58d5e6bb-811f-45d3-aa67-b144100f4607"
 					(reference "R76")
 					(unit 1)
@@ -2917,7 +2917,7 @@
 			(uuid "6cb40a3f-ceb5-4549-ba94-ab8b26d44e61")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/58d5e6bb-811f-45d3-aa67-b144100f4607"
 					(reference "R77")
 					(unit 1)
@@ -2997,7 +2997,7 @@
 			(uuid "6b67cca1-9de8-4e69-a55c-47bc06beccf2")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/58d5e6bb-811f-45d3-aa67-b144100f4607"
 					(reference "JP12")
 					(unit 1)
@@ -3076,7 +3076,7 @@
 			(uuid "c100448d-832c-4277-997b-6fb8bd8423cb")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/58d5e6bb-811f-45d3-aa67-b144100f4607"
 					(reference "#PWR096")
 					(unit 1)
@@ -3157,7 +3157,7 @@
 			(uuid "534c1184-793f-4a4c-8b9f-6c1514a9d71b")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/58d5e6bb-811f-45d3-aa67-b144100f4607"
 					(reference "R75")
 					(unit 1)
@@ -3237,7 +3237,7 @@
 			(uuid "3bfd1eb5-05e8-47b3-873a-0f47685b956a")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/58d5e6bb-811f-45d3-aa67-b144100f4607"
 					(reference "JP11")
 					(unit 1)
@@ -3279,7 +3279,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 119.38 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -3319,7 +3319,7 @@
 			(uuid "f108c6c8-0cca-45c2-943b-03142e5df7d5")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/58d5e6bb-811f-45d3-aa67-b144100f4607"
 					(reference "R74")
 					(unit 1)
@@ -3457,7 +3457,7 @@
 			(uuid "8171f3d1-47a0-48fd-b3a3-bbf9c11fee4e")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/58d5e6bb-811f-45d3-aa67-b144100f4607"
 					(reference "Q9")
 					(unit 1)
@@ -3539,7 +3539,7 @@
 			(uuid "8ebaee9a-e49b-4363-9a73-e39693dc6356")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/58d5e6bb-811f-45d3-aa67-b144100f4607"
 					(reference "D11")
 					(unit 1)
@@ -3680,7 +3680,7 @@
 			(uuid "88eef64c-47e6-49a3-8f82-98c5e1bee703")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/58d5e6bb-811f-45d3-aa67-b144100f4607"
 					(reference "Q8")
 					(unit 1)
@@ -3760,7 +3760,7 @@
 			(uuid "2b97c26c-6a46-42c6-88d0-19d2e15d95cc")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/58d5e6bb-811f-45d3-aa67-b144100f4607"
 					(reference "JP10")
 					(unit 1)
@@ -3898,7 +3898,7 @@
 			(uuid "8171f3d1-47a0-48fd-b3a3-bbf9c11fee4f")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/58d5e6bb-811f-45d3-aa67-b144100f4607"
 					(reference "Q9")
 					(unit 2)
@@ -3977,7 +3977,7 @@
 			(uuid "489f4100-2d11-4eeb-802b-b71924104b7d")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/58d5e6bb-811f-45d3-aa67-b144100f4607"
 					(reference "#PWR094")
 					(unit 1)

@@ -531,7 +531,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "mixpower-path-mini-bq25620-board-r1.kicad_pro",
+    "filename": "mixpower-path-nano-bq25620-board-r1.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -906,18 +906,18 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "mixpower-path-mini-bq25620-board-r1.kicad_sch",
-        "name": "mixpower-path-mini-bq25620-board-r1",
+        "filename": "mixpower-path-nano-bq25620-board-r1.kicad_sch",
+        "name": "mixpower-path-nano-bq25620-board-r1",
         "uuid": "2e43857b-9bf9-460c-948c-ec2cf8a8d6b4"
       }
     ],
-    "used_designators": "TP1-10,SW1-3,J1-11,#FLG1-2,#PWR1-99,C1-55,U1-14,D1-11,F1,Q1-9,H1-3,JP1-12,R1-78,FB1-2,L1-3,RV1",
+    "used_designators": "U15-20,Q10,JP13-15,R79-85",
     "variants": []
   },
   "sheets": [
     [
       "2e43857b-9bf9-460c-948c-ec2cf8a8d6b4",
-      "mixpower-path-mini-bq25620-board-r1"
+      "mixpower-path-nano-bq25620-board-r1"
     ],
     [
       "608727b1-1145-4b7c-8484-0a77632bac85",

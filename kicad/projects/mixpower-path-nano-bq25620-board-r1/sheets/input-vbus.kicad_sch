@@ -2891,7 +2891,7 @@
 		)
 		(uuid "48bca6bd-deb1-43ea-92dd-47413c085bf6")
 	)
-	(text "* ESD protection and filtering.\n* Maybe it needs proper calculation for this Pi-like filter... Or perhaps it matters not."
+	(text "* ESD protection and filtering.\n* Maybe it needs proper calculation for this Pi-like filter... Or perhaps it matters not.\n* ESD is bidirectional because it's what I have in stock, but it can be replaced with a uni."
 		(exclude_from_sim no)
 		(at 88.646 63.754 0)
 		(effects
@@ -4349,7 +4349,7 @@
 			(uuid "2f68dd3a-7e3a-418a-bb48-440a6447f815")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "FB2")
 					(unit 1)
@@ -4428,7 +4428,7 @@
 			(uuid "e8d81ff2-61c7-48f7-85dc-2434c9e8b5c5")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "#PWR043")
 					(unit 1)
@@ -4566,7 +4566,7 @@
 			(uuid "099c0067-d04e-44a0-a8fd-5d78e75206ff")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "U5")
 					(unit 1)
@@ -4645,7 +4645,7 @@
 			(uuid "d9ed338c-f43d-40e8-984b-3ea045af42e0")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "#PWR047")
 					(unit 1)
@@ -4724,7 +4724,7 @@
 			(uuid "a71fef23-c7b0-4d78-85df-49031a88cdf5")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "#PWR042")
 					(unit 1)
@@ -4746,7 +4746,7 @@
 		(fields_autoplaced yes)
 		(uuid "22d32702-28ea-4a4b-bd2d-37e13952e418")
 		(property "Reference" "J5"
-			(at 57.15 54.61 0)
+			(at 57.15 55.88 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4756,12 +4756,12 @@
 			)
 		)
 		(property "Value" "USB_C_Receptacle_USB2.0_16P"
-			(at 57.15 57.15 0)
+			(at 57.15 58.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.762 0.762)
 				)
 			)
 		)
@@ -4850,7 +4850,7 @@
 			(uuid "3cfe1831-5880-46ed-8da2-4048dc89ff52")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "J5")
 					(unit 1)
@@ -4932,7 +4932,7 @@
 			(uuid "249b9e1f-7f0a-4955-8d3a-2919c94846db")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "C24")
 					(unit 1)
@@ -5014,7 +5014,7 @@
 			(uuid "8756ee6b-733b-47ad-9c77-9f533d945174")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "R29")
 					(unit 1)
@@ -5095,7 +5095,7 @@
 			(uuid "53828127-17dd-4d5e-b0c6-26d3f9830ef1")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "R33")
 					(unit 1)
@@ -5174,7 +5174,7 @@
 			(uuid "4d8f500a-2140-477d-83a1-7e3835b2aa97")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "TP4")
 					(unit 1)
@@ -5268,7 +5268,7 @@
 			(uuid "95495473-6948-4efd-be95-9a589bf02eb2")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "Q4")
 					(unit 1)
@@ -5347,7 +5347,7 @@
 			(uuid "f7097f07-cd77-4f83-ae77-405809939bac")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "#PWR044")
 					(unit 1)
@@ -5378,7 +5378,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D-"
+		(property "Value" "D+"
 			(at 114.3 72.3899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5426,7 +5426,7 @@
 			(uuid "166c0659-bc8b-4727-b9b7-a243fc0ca93c")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "TP2")
 					(unit 1)
@@ -5505,7 +5505,7 @@
 			(uuid "d0857262-1ae7-4120-a0d2-c26560c5a97c")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "#FLG02")
 					(unit 1)
@@ -5587,7 +5587,7 @@
 			(uuid "f94f1676-7606-41f3-9566-095be60a5e4f")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "R28")
 					(unit 1)
@@ -5669,7 +5669,7 @@
 			(uuid "c0d55dc9-c00e-45fa-8486-6d2b834b5813")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "C27")
 					(unit 1)
@@ -5748,7 +5748,7 @@
 			(uuid "8011a8e4-6a42-4a81-b8c2-dd4e90deabf7")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "TP5")
 					(unit 1)
@@ -5829,7 +5829,7 @@
 			(uuid "02c0b309-85b7-4565-9540-63bdf6bc786c")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "R31")
 					(unit 1)
@@ -5908,7 +5908,7 @@
 			(uuid "944735c3-b57e-4047-bf05-2744d4b1ce5c")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "#PWR040")
 					(unit 1)
@@ -5987,7 +5987,7 @@
 			(uuid "e1e725f6-1604-4f4f-ab1d-8f2504ee6cce")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "TP3")
 					(unit 1)
@@ -6070,7 +6070,7 @@
 			(uuid "3d4649b4-eb73-4d55-914a-a3fc9dde4047")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "R24")
 					(unit 1)
@@ -6149,7 +6149,7 @@
 			(uuid "e96f94af-b3fa-4e79-923b-5f697a63bfe2")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "#PWR041")
 					(unit 1)
@@ -6229,7 +6229,7 @@
 			(uuid "335e6921-b0f3-4b18-a052-52e8a806fba7")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "#PWR049")
 					(unit 1)
@@ -6308,7 +6308,7 @@
 			(uuid "ec59bbbe-49d8-4dc7-af6d-34f059f32007")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "#PWR050")
 					(unit 1)
@@ -6387,7 +6387,7 @@
 			(uuid "38802c4b-8ac0-4ad5-bc5c-cd5316d9ceef")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "R27")
 					(unit 1)
@@ -6418,7 +6418,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D+"
+		(property "Value" "D-"
 			(at 107.95 72.3899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6466,7 +6466,7 @@
 			(uuid "dcd5c7d5-01a0-4457-a96c-58b36dabb2d3")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "TP1")
 					(unit 1)
@@ -6548,7 +6548,7 @@
 			(uuid "2aea1052-1dfe-4930-ab00-6c74a2e10ab2")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "C26")
 					(unit 1)
@@ -6631,7 +6631,7 @@
 			(uuid "3394c07c-95af-49bf-b0de-bd0a85ddf88b")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "R25")
 					(unit 1)
@@ -6713,7 +6713,7 @@
 			(uuid "df78c52f-34c6-494a-86ad-ff9f0d8a37b2")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "C28")
 					(unit 1)
@@ -6795,7 +6795,7 @@
 			(uuid "5d98046d-d83f-4e21-a5b3-f6bd1c2e3924")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "C29")
 					(unit 1)
@@ -6874,7 +6874,7 @@
 			(uuid "8dfdc601-c35d-423e-b666-bdb75719ec2a")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "#PWR054")
 					(unit 1)
@@ -6956,7 +6956,7 @@
 			(uuid "c7fdb2ff-bc68-4900-bc26-21b1c7f70a24")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "R30")
 					(unit 1)
@@ -7035,7 +7035,7 @@
 			(uuid "e8b72ef3-a473-43fc-be3f-a17ec866cf05")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "#PWR052")
 					(unit 1)
@@ -7117,7 +7117,7 @@
 			(uuid "9c37b1e4-c37d-49f8-9c99-4b4db9bb2519")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "C30")
 					(unit 1)
@@ -7198,7 +7198,7 @@
 			(uuid "b45e51f0-46b7-4fcc-9b86-bd2646edeb0b")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "C25")
 					(unit 1)
@@ -7280,7 +7280,7 @@
 			(uuid "d529dcdb-27c0-432b-a67e-ccbcce3619a7")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "R32")
 					(unit 1)
@@ -7359,7 +7359,7 @@
 			(uuid "7132abc0-33df-4504-a5fa-a042ad6340e0")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "#PWR053")
 					(unit 1)
@@ -7438,7 +7438,7 @@
 			(uuid "dbf8a1d1-dd7f-4db0-8f6a-9bb20db755b9")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "#PWR045")
 					(unit 1)
@@ -7518,7 +7518,7 @@
 			(uuid "36e8cebc-6a72-4d58-a784-cc60b861bc25")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "#PWR051")
 					(unit 1)
@@ -7597,7 +7597,7 @@
 			(uuid "51dab0ed-4b8a-42a9-924e-98a12a39282d")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "R26")
 					(unit 1)
@@ -7676,7 +7676,7 @@
 			(uuid "2ceb96a2-b26b-4e18-86d4-ac8314618d4f")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "JP6")
 					(unit 1)
@@ -7755,7 +7755,7 @@
 			(uuid "6dc2ffb4-8b81-44dc-8725-0f54502e17e0")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "#PWR048")
 					(unit 1)
@@ -7834,7 +7834,7 @@
 			(uuid "424faca5-af7d-4322-a0af-1f62ccbec486")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "#PWR046")
 					(unit 1)
@@ -7916,7 +7916,7 @@
 			(uuid "1b800348-f3f9-4bbf-aa9f-0792be970897")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "D8")
 					(unit 1)
@@ -8008,7 +8008,7 @@
 			(uuid "95495473-6948-4efd-be95-9a589bf02eb3")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/608727b1-1145-4b7c-8484-0a77632bac85"
 					(reference "Q4")
 					(unit 2)

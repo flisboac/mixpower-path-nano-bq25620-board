@@ -1020,8 +1020,20 @@
 		)
 	)
 	(rectangle
+		(start 134.62 93.98)
+		(end 160.02 106.68)
+		(stroke
+			(width 0)
+			(type dot)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "3a1a6e9c-3df6-4a38-a4a6-d17160c8ad19")
+	)
+	(rectangle
 		(start 88.9 62.23)
-		(end 167.64 119.38)
+		(end 177.8 119.38)
 		(stroke
 			(width 0)
 			(type dash_dot_dot)
@@ -1034,7 +1046,7 @@
 	)
 	(text "[vreg-3v3] 3.3V Voltage Regulator"
 		(exclude_from_sim no)
-		(at 129.54 66.04 0)
+		(at 133.35 66.04 0)
 		(effects
 			(font
 				(size 2.032 2.032)
@@ -1044,6 +1056,18 @@
 			)
 		)
 		(uuid "3a319702-3bde-4063-880e-0415c3bc9cb9")
+	)
+	(text "* For Vin_min=2.7V,\n  Vout=3.3V,\n  mode=boost,\n  freq=2.1MHz:\n  - I_peak = 4.38A"
+		(exclude_from_sim no)
+		(at 147.32 97.79 0)
+		(effects
+			(font
+				(size 0.762 0.762)
+				(color 72 72 72 1)
+			)
+			(justify left)
+		)
+		(uuid "e0e2de53-7e56-4074-9500-592d3870f247")
 	)
 	(junction
 		(at 100.33 102.87)
@@ -1058,7 +1082,7 @@
 		(uuid "1448e685-2ea9-4c14-8956-ea67e3617125")
 	)
 	(junction
-		(at 160.02 73.66)
+		(at 170.18 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1dbc5ed1-3080-49d6-a741-82b09242ea60")
@@ -1088,19 +1112,19 @@
 		(uuid "4d7b92a0-c88b-448f-a012-575fb4cf6db8")
 	)
 	(junction
-		(at 151.13 107.95)
+		(at 161.29 107.95)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "65ce53b0-0920-48c2-8c3a-1e8029430465")
 	)
 	(junction
-		(at 147.32 73.66)
+		(at 157.48 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8d61360e-5105-49b3-8617-84b3f9d1e589")
 	)
 	(junction
-		(at 160.02 107.95)
+		(at 170.18 107.95)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "91a8f6a5-4316-4425-a0ef-d0302abfbc05")
@@ -1112,7 +1136,7 @@
 		(uuid "94ef383e-6ff1-47e9-b3ab-b99cc211d21f")
 	)
 	(junction
-		(at 152.4 92.71)
+		(at 162.56 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9e1075ee-1dbf-4ca5-9381-ad43ee7f673d")
@@ -1124,7 +1148,7 @@
 		(uuid "ceb4d468-081d-4987-9925-e9ade9077e7a")
 	)
 	(junction
-		(at 152.4 73.66)
+		(at 162.56 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dc4abef4-222b-49da-a324-727af5673c4a")
@@ -1187,17 +1211,7 @@
 	)
 	(wire
 		(pts
-			(xy 6.5024 0.1524) (xy 6.5024 31.9024)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "131515a9-658b-4bc1-8c7b-c7a519b7c409")
-	)
-	(wire
-		(pts
-			(xy 152.4 92.71) (xy 152.4 93.98)
+			(xy 162.56 92.71) (xy 162.56 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1217,7 +1231,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 76.2) (xy 147.32 73.66)
+			(xy 157.48 76.2) (xy 157.48 73.66)
 		)
 		(stroke
 			(width 0)
@@ -1227,7 +1241,7 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 73.66) (xy 152.4 76.2)
+			(xy 162.56 73.66) (xy 162.56 76.2)
 		)
 		(stroke
 			(width 0)
@@ -1247,7 +1261,7 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 81.28) (xy 152.4 82.55)
+			(xy 162.56 81.28) (xy 162.56 82.55)
 		)
 		(stroke
 			(width 0)
@@ -1267,7 +1281,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 113.03) (xy 151.13 107.95)
+			(xy 161.29 113.03) (xy 161.29 107.95)
 		)
 		(stroke
 			(width 0)
@@ -1287,16 +1301,6 @@
 	)
 	(wire
 		(pts
-			(xy 0.1524 0.1524) (xy 6.5024 0.1524)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4c8a16ec-e4f2-4d2a-b47a-832b71b35cbf")
-	)
-	(wire
-		(pts
 			(xy 109.22 100.33) (xy 109.22 101.6)
 		)
 		(stroke
@@ -1307,7 +1311,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 73.66) (xy 152.4 73.66)
+			(xy 157.48 73.66) (xy 162.56 73.66)
 		)
 		(stroke
 			(width 0)
@@ -1317,7 +1321,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 92.71) (xy 152.4 92.71)
+			(xy 137.16 92.71) (xy 162.56 92.71)
 		)
 		(stroke
 			(width 0)
@@ -1347,7 +1351,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 73.66) (xy 160.02 88.9)
+			(xy 170.18 73.66) (xy 170.18 88.9)
 		)
 		(stroke
 			(width 0)
@@ -1397,7 +1401,7 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 92.71) (xy 152.4 87.63)
+			(xy 162.56 92.71) (xy 162.56 87.63)
 		)
 		(stroke
 			(width 0)
@@ -1407,7 +1411,7 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 73.66) (xy 160.02 73.66)
+			(xy 162.56 73.66) (xy 170.18 73.66)
 		)
 		(stroke
 			(width 0)
@@ -1424,16 +1428,6 @@
 			(type default)
 		)
 		(uuid "9604dfc4-fb9c-48e3-9b11-9cc05a5ab91f")
-	)
-	(wire
-		(pts
-			(xy 6.5024 31.9024) (xy 89.0524 31.9024)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "97234749-1797-4b6d-b8f2-07a31fbc753d")
 	)
 	(wire
 		(pts
@@ -1467,7 +1461,7 @@
 	)
 	(polyline
 		(pts
-			(xy 88.9 68.58) (xy 167.64 68.58)
+			(xy 88.9 68.58) (xy 177.8 68.58)
 		)
 		(stroke
 			(width 0)
@@ -1518,7 +1512,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 107.95) (xy 151.13 107.95)
+			(xy 137.16 107.95) (xy 161.29 107.95)
 		)
 		(stroke
 			(width 0)
@@ -1588,7 +1582,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 73.66) (xy 147.32 73.66)
+			(xy 138.43 73.66) (xy 157.48 73.66)
 		)
 		(stroke
 			(width 0)
@@ -1598,7 +1592,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 107.95) (xy 160.02 107.95)
+			(xy 161.29 107.95) (xy 170.18 107.95)
 		)
 		(stroke
 			(width 0)
@@ -1628,7 +1622,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 93.98) (xy 160.02 107.95)
+			(xy 170.18 93.98) (xy 170.18 107.95)
 		)
 		(stroke
 			(width 0)
@@ -1638,7 +1632,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 73.66) (xy 168.91 73.66)
+			(xy 170.18 73.66) (xy 179.07 73.66)
 		)
 		(stroke
 			(width 0)
@@ -1648,7 +1642,7 @@
 	)
 	(wire
 		(pts
-			(xy 166.37 107.95) (xy 160.02 107.95)
+			(xy 176.53 107.95) (xy 170.18 107.95)
 		)
 		(stroke
 			(width 0)
@@ -1657,7 +1651,7 @@
 		(uuid "fb9c93ad-f14b-4737-a97e-8a85dd2cbdc4")
 	)
 	(label "VSWREG_FB"
-		(at 137.16 92.71 0)
+		(at 147.32 92.71 0)
 		(effects
 			(font
 				(size 0.508 0.508)
@@ -1677,7 +1671,7 @@
 		(uuid "3df26254-e255-44d3-b873-559361143957")
 	)
 	(label "~{3V3_PG}"
-		(at 166.37 107.95 180)
+		(at 176.53 107.95 180)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -1720,7 +1714,7 @@
 	)
 	(hierarchical_label "3V3"
 		(shape output)
-		(at 168.91 73.66 0)
+		(at 179.07 73.66 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -1814,7 +1808,7 @@
 			(uuid "c3a21285-824d-42c6-ae46-5ba1abbd6307")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
 					(reference "C43")
 					(unit 1)
@@ -1824,7 +1818,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 152.4 96.52 0)
+		(at 162.56 96.52 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -1835,7 +1829,7 @@
 		(dnp no)
 		(uuid "14879549-92de-4c66-ad80-1c0e4a302af9")
 		(property "Reference" "R63"
-			(at 153.67 95.2499 0)
+			(at 163.83 95.2499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1846,7 +1840,7 @@
 			)
 		)
 		(property "Value" "91k"
-			(at 153.67 97.7899 0)
+			(at 163.83 97.7899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1857,7 +1851,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 152.4 96.52 0)
+			(at 162.56 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1868,7 +1862,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 152.4 96.52 0)
+			(at 162.56 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1879,7 +1873,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 152.4 96.52 0)
+			(at 162.56 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1896,7 +1890,7 @@
 			(uuid "dc367213-c961-45d6-b16a-b9198acc40ce")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
 					(reference "R63")
 					(unit 1)
@@ -1977,7 +1971,7 @@
 			(uuid "d842fd08-3970-4b0b-8471-7e005ed18b4c")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
 					(reference "R58")
 					(unit 1)
@@ -1987,7 +1981,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 147.32 78.74 0)
+		(at 157.48 78.74 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -1998,7 +1992,7 @@
 		(dnp no)
 		(uuid "34d79992-0daa-44eb-8c0e-d4b2893dc522")
 		(property "Reference" "C44"
-			(at 144.78 77.4762 0)
+			(at 154.94 77.4762 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2009,7 +2003,7 @@
 			)
 		)
 		(property "Value" "22u"
-			(at 144.78 80.0162 0)
+			(at 154.94 80.0162 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2020,7 +2014,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 147.32 78.74 0)
+			(at 157.48 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2031,7 +2025,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 147.32 78.74 0)
+			(at 157.48 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2042,7 +2036,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 147.32 78.74 0)
+			(at 157.48 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2059,7 +2053,7 @@
 			(uuid "ebcf72f3-3d25-4aa2-a1cb-6196710d37be")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
 					(reference "C44")
 					(unit 1)
@@ -2140,7 +2134,7 @@
 			(uuid "18fa43c2-c761-4830-9f0f-ffb5e5d15a8d")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
 					(reference "R59")
 					(unit 1)
@@ -2150,7 +2144,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 152.4 85.09 0)
+		(at 162.56 85.09 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -2161,7 +2155,7 @@
 		(dnp no)
 		(uuid "6157fb22-c60e-4cf2-8f45-ba03c82edc53")
 		(property "Reference" "R62"
-			(at 153.67 83.8199 0)
+			(at 163.83 83.8199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2172,7 +2166,7 @@
 			)
 		)
 		(property "Value" "511k"
-			(at 153.67 86.3599 0)
+			(at 163.83 86.3599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2183,7 +2177,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 152.4 85.09 0)
+			(at 162.56 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2194,7 +2188,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 152.4 85.09 0)
+			(at 162.56 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2205,7 +2199,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 152.4 85.09 0)
+			(at 162.56 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2222,7 +2216,7 @@
 			(uuid "262e1d24-acb9-4c58-9668-9506c6784aea")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
 					(reference "R62")
 					(unit 1)
@@ -2232,7 +2226,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Small")
-		(at 151.13 113.03 0)
+		(at 161.29 113.03 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -2243,7 +2237,7 @@
 		(dnp no)
 		(uuid "82e389e9-6da4-4a2c-b984-531ee7ff6a93")
 		(property "Reference" "TP10"
-			(at 149.86 111.7599 0)
+			(at 160.02 111.7599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2254,7 +2248,7 @@
 			)
 		)
 		(property "Value" "3V3_PG"
-			(at 149.86 114.2999 0)
+			(at 160.02 114.2999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2265,7 +2259,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
-			(at 146.05 113.03 0)
+			(at 156.21 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2276,7 +2270,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 146.05 113.03 0)
+			(at 156.21 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2287,7 +2281,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 151.13 113.03 0)
+			(at 161.29 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2301,7 +2295,7 @@
 			(uuid "a5e602da-8cbd-44d2-a9a0-714d0102a929")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
 					(reference "TP10")
 					(unit 1)
@@ -2311,7 +2305,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 160.02 91.44 0)
+		(at 170.18 91.44 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -2322,7 +2316,7 @@
 		(dnp yes)
 		(uuid "8d4e2b8a-a41c-4a58-bf11-9e5b0a676516")
 		(property "Reference" "R64"
-			(at 161.29 90.1699 0)
+			(at 171.45 90.1699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2333,7 +2327,7 @@
 			)
 		)
 		(property "Value" "1M"
-			(at 161.29 92.7099 0)
+			(at 171.45 92.7099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2344,7 +2338,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 160.02 91.44 0)
+			(at 170.18 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2355,7 +2349,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 160.02 91.44 0)
+			(at 170.18 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2366,7 +2360,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 160.02 91.44 0)
+			(at 170.18 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2383,7 +2377,7 @@
 			(uuid "9b7cdac4-edfc-42b6-ac43-5e05ddf4a8f4")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
 					(reference "R64")
 					(unit 1)
@@ -2464,7 +2458,7 @@
 			(uuid "82c80a26-5f93-48b7-b766-e793a1cb66a2")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
 					(reference "R60")
 					(unit 1)
@@ -2474,7 +2468,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 152.4 78.74 0)
+		(at 162.56 78.74 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -2485,7 +2479,7 @@
 		(dnp no)
 		(uuid "949c49fa-a281-40bd-83b8-9605efa8c51f")
 		(property "Reference" "R61"
-			(at 153.67 77.4699 0)
+			(at 163.83 77.4699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2496,7 +2490,7 @@
 			)
 		)
 		(property "Value" "0"
-			(at 153.67 80.0099 0)
+			(at 163.83 80.0099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2507,7 +2501,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 152.4 78.74 0)
+			(at 162.56 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2518,7 +2512,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 152.4 78.74 0)
+			(at 162.56 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2529,7 +2523,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 152.4 78.74 0)
+			(at 162.56 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2546,7 +2540,7 @@
 			(uuid "b93b8ab6-9520-4185-ba8f-378e8d4823f1")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
 					(reference "R61")
 					(unit 1)
@@ -2567,7 +2561,7 @@
 		(dnp no)
 		(uuid "97fb9576-56f3-41b9-8fb6-0df44e954b0c")
 		(property "Reference" "L2"
-			(at 144.78 99.0599 0)
+			(at 144.78 97.7899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2578,7 +2572,7 @@
 			)
 		)
 		(property "Value" "470n"
-			(at 144.78 101.5999 0)
+			(at 144.78 100.3299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2621,6 +2615,17 @@
 				)
 			)
 		)
+		(property "SKU" "DFE201612E-R47M=P2"
+			(at 144.78 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.508 0.508)
+				)
+				(justify left)
+			)
+		)
 		(pin "1"
 			(uuid "dab1d992-5c9d-4cfa-9e54-8c93455e6d68")
 		)
@@ -2628,7 +2633,7 @@
 			(uuid "3c674430-6dfe-453c-8489-2c667b028857")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
 					(reference "L2")
 					(unit 1)
@@ -2707,7 +2712,7 @@
 			(uuid "f92b1481-8410-4914-8805-029b23aedfc2")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
 					(reference "#PWR077")
 					(unit 1)
@@ -2717,7 +2722,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 152.4 99.06 0)
+		(at 162.56 99.06 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2728,7 +2733,7 @@
 		(fields_autoplaced yes)
 		(uuid "a9a4b207-549d-403e-ac8b-143f9dd77125")
 		(property "Reference" "#PWR079"
-			(at 152.4 105.41 0)
+			(at 162.56 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2739,7 +2744,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 152.4 104.14 0)
+			(at 162.56 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2750,7 +2755,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 152.4 99.06 0)
+			(at 162.56 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2761,7 +2766,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 152.4 99.06 0)
+			(at 162.56 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2772,7 +2777,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 152.4 99.06 0)
+			(at 162.56 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2786,7 +2791,7 @@
 			(uuid "3ca0a61b-4e0d-4494-a1dd-13ed76639a48")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
 					(reference "#PWR079")
 					(unit 1)
@@ -2865,7 +2870,7 @@
 			(uuid "9378934b-90e8-4fc3-aeb4-e64ededc9aef")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
 					(reference "#PWR076")
 					(unit 1)
@@ -2944,7 +2949,7 @@
 			(uuid "581db194-a81c-4a27-96a8-c0aa4f9dce16")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
 					(reference "TP9")
 					(unit 1)
@@ -3023,7 +3028,7 @@
 			(uuid "323af3df-de62-4d4b-84cd-24565a514c8e")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
 					(reference "#PWR075")
 					(unit 1)
@@ -3102,7 +3107,7 @@
 			(uuid "2c3b8b1d-06e7-4d87-b650-de08ec95c915")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
 					(reference "TP8")
 					(unit 1)
@@ -3250,7 +3255,7 @@
 			(uuid "aa8671b9-3ff9-4846-b47d-5cb6bb002693")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
 					(reference "U13")
 					(unit 1)
@@ -3260,7 +3265,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 147.32 81.28 0)
+		(at 157.48 81.28 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3271,7 +3276,7 @@
 		(fields_autoplaced yes)
 		(uuid "f6e26722-13bb-462c-b51e-aa3dc5ba852a")
 		(property "Reference" "#PWR078"
-			(at 147.32 87.63 0)
+			(at 157.48 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3282,7 +3287,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 147.32 86.36 0)
+			(at 157.48 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3293,7 +3298,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 147.32 81.28 0)
+			(at 157.48 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3304,7 +3309,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 147.32 81.28 0)
+			(at 157.48 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3315,7 +3320,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 147.32 81.28 0)
+			(at 157.48 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3329,7 +3334,7 @@
 			(uuid "007bf375-83c7-4060-beba-d7ddd29c5334")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/8d271180-8087-49c1-be7b-c6bf87d9e09d"
 					(reference "#PWR078")
 					(unit 1)

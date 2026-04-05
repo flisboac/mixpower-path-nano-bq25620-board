@@ -1768,6 +1768,184 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Jumper:SolderJumper_2_Open"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "JP"
+				(at 0 2.032 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SolderJumper_2_Open"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Solder Jumper, 2-pole, open"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "solder jumper SPST"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SolderJumper*Open*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SolderJumper_2_Open_0_1"
+				(polyline
+					(pts
+						(xy -0.254 1.016) (xy -0.254 -1.016)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -0.254 -1.016)
+					(mid -1.2656 0)
+					(end -0.254 1.016)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(arc
+					(start 0.254 1.016)
+					(mid 1.2656 0)
+					(end 0.254 -1.016)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 1.016) (xy 0.254 -1.016)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SolderJumper_2_Open_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Mechanical:MountingHole_Pad"
 			(pin_numbers
 				(hide yes)
@@ -2105,7 +2283,7 @@
 	)
 	(text "GP3"
 		(exclude_from_sim no)
-		(at 173.99 120.65 0)
+		(at 163.83 120.65 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -2172,9 +2350,9 @@
 		)
 		(uuid "a0a32e52-a71d-4122-873b-5da81053fbb3")
 	)
-	(text "* For connection with\n  a host (embedded\n  SoC/MCU, PC, etc.).\n* Only USER Bus exposed\n  (SCL_TX/SDA_RX), can\n  be either I2C or UART.\n  Internal Peripheral\n  bus only accessible\n  from the HAT Headers.\n* D+ and D- is bypassed\n  to the host, but no\n  MUX controls it. Host\n  must communicate with\n  the board to know when\n  it's safe to use.\n* ~{RST} and BOOT are\n  useful for programming\n  the host, especially\n  if they're ST MCUs.\n\n\n\n* Pins:\n  - SCL_TX: SCL (I2C) / TX (UART)\n  - SDA_RX: SDA (I2C) / RX (UART)\n  - ~{IRQB}: Smart interrupt bus\n  - VCC: Supply, 5V or 3.3V, 1A max\n    on connectors, 3A on pin headers\n  - ~{BTN}: User side-button\n  - ~{RST}: Physical RESET signal\n  - D+: USB's D+ data line\n  - D-: USB's D- data line\n  - BOOT: Physical BOOT signal\n  - 5V, 3V3, VBUS, VOTG, VDD1: \n    Supply lines, 1A max on\n    connectors, 3A on pin headers\n\n* WARNING: Both VOTG and VBUS can be\n  up to 24V, depending on USB-PD\n  negotiation or external voltage\n  presented on VEXT! All other supply\n  lines are 5V max."
+	(text "* For connection with a host (embedded\n  MCU, PC, etc.).\n* Only USER Bus exposed (SCL_TX,\n  SDA_RX), can be either I2C or UART.\n  Internal Peripheral bus only accessible\n  from the HAT Headers.\n* D+ and D- is bypassed to the host,\n  but no MUX controls it. Host must\n  communicate with the board to know\n  when it's safe to establish USB\n  communication.\n* ~{RST} and BOOT are useful for\n  programming the host, especially if\n  they're ST MCUs.\n* The pinout is intended to be unified.\n  Some pins have fixed functions.\n  However, this board doesn't have a\n  dedicated 5V regulator (it's boosted\n  up by BQ25620's PMIC/OTG when on\n  battery), 5V is replaced by VBUS/PMID,\n  which can be up to 20V. Maximum\n  negotiated (through USB-C PD) or\n  boosted (through BQ25620) voltages\n  can be configured at firmware level.\n\n\n* Pins:\n  - SCL_TX: SCL (I2C) / TX (UART)\n  - SDA_RX: SDA (I2C) / RX (UART)\n  - ~{IRQB}: Smart interrupt bus\n  - VCC: Supply, 5V or 3.3V, 1A max\n    on connectors, 3A on pin headers\n  - ~{BTN}: User side-button\n  - ~{RST}: Physical RESET signal\n  - D+: USB's D+ data line\n  - D-: USB's D- data line\n  - BOOT: Physical BOOT signal\n  - 5V, 3V3, VBUS, VOTG, VDD1: \n    Supply lines, 1A max on\n    connectors, 3A on pin headers\n\n* WARNING: Both VOTG and VBUS can be\n  up to 24V, depending on USB-PD\n  negotiation or external voltage\n  presented on VEXT! All other supply\n  lines are 5V max"
 		(exclude_from_sim no)
-		(at 133.35 66.04 0)
+		(at 133.35 71.12 0)
 		(effects
 			(font
 				(size 0.762 0.762)
@@ -2208,22 +2386,46 @@
 		(uuid "e7a82557-c650-484f-84fc-f2202b51fa27")
 	)
 	(junction
+		(at 161.29 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0eb463d9-7b26-49ef-b9cb-99488eb1effe")
+	)
+	(junction
+		(at 161.29 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3d9c2327-90fc-4c0e-9cbb-8baf57708570")
+	)
+	(junction
+		(at 198.12 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "41de74d5-c843-4031-815b-71282a1df0aa")
+	)
+	(junction
 		(at 87.63 105.41)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4d61ca19-d962-4d20-b1f7-a6c2aab3b8ba")
 	)
 	(junction
-		(at 161.29 87.63)
+		(at 161.29 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "9ee00de1-2183-4218-89fe-bef1e27e1378")
+		(uuid "61aab20f-209b-441a-96bc-76f7832a667d")
+	)
+	(junction
+		(at 198.12 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "82268a1e-2ba3-421f-b1fe-11a75490634a")
 	)
 	(junction
 		(at 161.29 82.55)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "a69be1dc-20c4-4ef6-ba11-91ff4182add8")
+		(uuid "828472d8-9d5a-435c-9c04-54cd5e3ab4b3")
 	)
 	(junction
 		(at 87.63 125.73)
@@ -2243,6 +2445,18 @@
 		(color 0 0 0 0)
 		(uuid "d104643c-52a9-44fc-be93-2e0d7266270e")
 	)
+	(junction
+		(at 161.29 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d9bc6c24-c131-4f00-b94d-b375c149d26b")
+	)
+	(junction
+		(at 198.12 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f4b23379-951f-4d53-9a7c-0d40b64adc83")
+	)
 	(wire
 		(pts
 			(xy 110.49 44.45) (xy 125.73 44.45)
@@ -2252,6 +2466,26 @@
 			(type default)
 		)
 		(uuid "00276b89-a538-43a9-9009-de3873ac226c")
+	)
+	(wire
+		(pts
+			(xy 175.26 57.15) (xy 198.12 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0365673e-a6e6-4c12-8b9f-2989bb8c4747")
+	)
+	(wire
+		(pts
+			(xy 161.29 86.36) (xy 161.29 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a32ea9c-cdde-4784-9fd7-89e9df04a446")
 	)
 	(polyline
 		(pts
@@ -2337,6 +2571,16 @@
 	)
 	(wire
 		(pts
+			(xy 161.29 82.55) (xy 161.29 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f4e77a8-27e2-4cd3-89a0-48b2026d1b91")
+	)
+	(wire
+		(pts
 			(xy 148.59 151.13) (xy 179.07 151.13)
 		)
 		(stroke
@@ -2408,6 +2652,16 @@
 	)
 	(wire
 		(pts
+			(xy 175.26 82.55) (xy 198.12 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a9e7052-0838-4ecd-83b0-c661e08ced9f")
+	)
+	(wire
+		(pts
 			(xy 148.59 118.11) (xy 175.26 118.11)
 		)
 		(stroke
@@ -2449,7 +2703,7 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 87.63) (xy 163.83 87.63)
+			(xy 161.29 86.36) (xy 166.37 86.36)
 		)
 		(stroke
 			(width 0)
@@ -2470,13 +2724,23 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 90.17) (xy 125.73 90.17)
+			(xy 110.49 90.17) (xy 125.73 90.17)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "5a6378b9-d1ce-4583-b6a8-81159307ecad")
+	)
+	(wire
+		(pts
+			(xy 175.26 69.85) (xy 198.12 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "615f47aa-dbc5-4653-9445-43acdb694f6d")
 	)
 	(wire
 		(pts
@@ -2490,13 +2754,13 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 82.55) (xy 161.29 87.63)
+			(xy 198.12 82.55) (xy 198.12 130.81)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6260e955-8885-44a9-80b3-60f379fa1e31")
+		(uuid "69784be0-b4ff-418c-bcd9-19406afb7698")
 	)
 	(polyline
 		(pts
@@ -2511,7 +2775,7 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 77.47) (xy 161.29 77.47)
+			(xy 166.37 60.96) (xy 161.29 60.96)
 		)
 		(stroke
 			(width 0)
@@ -2541,6 +2805,26 @@
 	)
 	(wire
 		(pts
+			(xy 161.29 73.66) (xy 161.29 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ddf0e82-f019-43f5-84e2-644fb4f1eeb5")
+	)
+	(wire
+		(pts
+			(xy 106.68 95.25) (xy 125.73 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f10a55b-db12-44a4-9b50-5a2cba65bf00")
+	)
+	(wire
+		(pts
 			(xy 121.92 128.27) (xy 135.89 128.27)
 		)
 		(stroke
@@ -2551,13 +2835,23 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 77.47) (xy 161.29 82.55)
+			(xy 161.29 57.15) (xy 161.29 60.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "73d25c33-544f-4dab-9eb8-9a0474ea4549")
+	)
+	(wire
+		(pts
+			(xy 161.29 60.96) (xy 161.29 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74d747ce-8977-4f9e-a2e5-a6f9340e3f68")
 	)
 	(wire
 		(pts
@@ -2568,16 +2862,6 @@
 			(type default)
 		)
 		(uuid "765a0d91-7a1d-43ae-a17f-8419bf9f36b1")
-	)
-	(wire
-		(pts
-			(xy 110.49 95.25) (xy 125.73 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "767b3ba8-a59b-4b56-88b6-ce99ebf5ed15")
 	)
 	(wire
 		(pts
@@ -2632,6 +2916,16 @@
 	)
 	(wire
 		(pts
+			(xy 198.12 69.85) (xy 198.12 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e3c1a60-eb8d-4703-b4ff-d1fb7ebd483e")
+	)
+	(wire
+		(pts
 			(xy 106.68 74.93) (xy 125.73 74.93)
 		)
 		(stroke
@@ -2662,23 +2956,13 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 82.55) (xy 163.83 82.55)
+			(xy 161.29 73.66) (xy 166.37 73.66)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "8d09ad57-0587-48b7-8026-e3d75aa1e0bf")
-	)
-	(wire
-		(pts
-			(xy 161.29 87.63) (xy 161.29 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8f4a4ec4-739b-48cb-a0d9-d57a7e8e36bb")
 	)
 	(wire
 		(pts
@@ -2692,6 +2976,26 @@
 	)
 	(wire
 		(pts
+			(xy 198.12 57.15) (xy 198.12 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "926c6e22-5650-4910-8b5b-39763ea8e904")
+	)
+	(wire
+		(pts
+			(xy 161.29 57.15) (xy 165.1 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95847104-93a4-4e9b-88f3-78400e0147ba")
+	)
+	(wire
+		(pts
 			(xy 110.49 59.69) (xy 125.73 59.69)
 		)
 		(stroke
@@ -2699,6 +3003,16 @@
 			(type default)
 		)
 		(uuid "97fa2a0c-15f2-4b14-a654-179ef8f0ab17")
+	)
+	(wire
+		(pts
+			(xy 161.29 69.85) (xy 165.1 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "988fd36f-1e0e-46d7-8c37-f3ce8f22ef7e")
 	)
 	(wire
 		(pts
@@ -2752,6 +3066,16 @@
 	)
 	(wire
 		(pts
+			(xy 161.29 82.55) (xy 165.1 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2ed51f6-2136-4f90-883b-2a0daabad51e")
+	)
+	(wire
+		(pts
 			(xy 87.63 125.73) (xy 135.89 125.73)
 		)
 		(stroke
@@ -2779,6 +3103,16 @@
 			(type default)
 		)
 		(uuid "ba510a0f-e62f-4ae3-a0a4-24a04193ddf0")
+	)
+	(wire
+		(pts
+			(xy 161.29 69.85) (xy 161.29 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1185519-e73a-40b1-8b56-3ee10a445ebb")
 	)
 	(wire
 		(pts
@@ -2990,16 +3324,6 @@
 		)
 		(uuid "37fade90-bf1b-40d2-9a01-d35eabec90fd")
 	)
-	(label "VBUS"
-		(at 110.49 95.25 0)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left bottom)
-		)
-		(uuid "386c595c-bb3b-4261-9f8a-8e416f015bc6")
-	)
 	(label "~{USER_IRQB}"
 		(at 110.49 41.91 0)
 		(effects
@@ -3070,6 +3394,16 @@
 		)
 		(uuid "918d084a-63e1-4b22-bf1c-53f683876ec5")
 	)
+	(label "VBUS"
+		(at 110.49 90.17 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "bda349c7-8af9-48b3-b9a8-ddb6b4af006d")
+	)
 	(label "USER1_GP2_SDA_RX"
 		(at 110.49 39.37 0)
 		(effects
@@ -3100,7 +3434,7 @@
 		)
 		(uuid "d216584c-ca68-4346-999a-fb0113849632")
 	)
-	(label "VOTG"
+	(label "VBUS"
 		(at 110.49 115.57 0)
 		(effects
 			(font
@@ -3184,17 +3518,6 @@
 			(justify right)
 		)
 		(uuid "25a0b066-b724-4a09-95e9-543dbc9bedd8")
-	)
-	(hierarchical_label "VBUS"
-		(shape input)
-		(at 106.68 90.17 180)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "2acee370-8a2f-44e8-96f8-e7008ccbc713")
 	)
 	(hierarchical_label "SHIELD"
 		(shape input)
@@ -3339,6 +3662,17 @@
 		)
 		(uuid "c71cae25-9521-4128-8742-17920d9909e5")
 	)
+	(hierarchical_label "VBUS"
+		(shape input)
+		(at 106.68 95.25 180)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "d34a9c22-0e33-4c34-afc2-5172b98de5ee")
+	)
 	(hierarchical_label "VOTG"
 		(shape input)
 		(at 106.68 100.33 180)
@@ -3374,7 +3708,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 166.37 82.55 270)
+		(at 168.91 73.66 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3385,7 +3719,7 @@
 		(fields_autoplaced yes)
 		(uuid "0ae0718c-e1ba-4f28-b753-eba73fe7b6e3")
 		(property "Reference" "H2"
-			(at 170.18 82.5499 90)
+			(at 172.72 73.6599 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3396,7 +3730,7 @@
 			)
 		)
 		(property "Value" "M1"
-			(at 166.3701 85.09 0)
+			(at 168.9101 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3408,7 +3742,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_ISO7380_Pad_TopBottom"
-			(at 166.37 82.55 0)
+			(at 168.91 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3419,7 +3753,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 166.37 82.55 0)
+			(at 168.91 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3430,7 +3764,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 166.37 82.55 0)
+			(at 168.91 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3444,7 +3778,7 @@
 			(uuid "f9c6d6a0-9f92-4bda-b026-79951ffcf63c")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/121f6246-4b7d-494d-829b-f1279d4a8ccd"
 					(reference "H2")
 					(unit 1)
@@ -3565,7 +3899,7 @@
 			(uuid "289bd734-1033-448b-af87-f340c7c480b6")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/121f6246-4b7d-494d-829b-f1279d4a8ccd"
 					(reference "J10")
 					(unit 1)
@@ -3673,9 +4007,89 @@
 			(uuid "e64c8bbb-129e-4d77-b188-e59c0151e09e")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/121f6246-4b7d-494d-829b-f1279d4a8ccd"
 					(reference "J8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:SolderJumper_2_Open")
+		(at 170.18 82.55 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "452f9a42-0fcc-4dfb-a101-ae4485b14562")
+		(property "Reference" "JP15"
+			(at 170.18 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "H3_SHIELD_TO_GND"
+			(at 170.18 80.01 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm"
+			(at 170.18 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.18 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Solder Jumper, 2-pole, open"
+			(at 170.18 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "f8f9bf6e-a15d-4267-94b6-e7e570e6b316")
+		)
+		(pin "1"
+			(uuid "09657bce-30b2-4660-93f7-0bfc7fb18a61")
+		)
+		(instances
+			(project "mixpower-path-nano-bq25620-board-r1"
+				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/121f6246-4b7d-494d-829b-f1279d4a8ccd"
+					(reference "JP15")
 					(unit 1)
 				)
 			)
@@ -3799,7 +4213,7 @@
 			(uuid "057706e9-9b1e-4bde-b4d9-b8f043656305")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/121f6246-4b7d-494d-829b-f1279d4a8ccd"
 					(reference "J9")
 					(unit 1)
@@ -3808,8 +4222,88 @@
 		)
 	)
 	(symbol
+		(lib_id "Jumper:SolderJumper_2_Open")
+		(at 170.18 57.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5f8eb0c7-5b2f-4493-8a4f-1d750409587b")
+		(property "Reference" "JP13"
+			(at 170.18 52.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "H1_SHIELD_TO_GND"
+			(at 170.18 54.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm"
+			(at 170.18 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.18 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Solder Jumper, 2-pole, open"
+			(at 170.18 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "3d509fc3-5993-456a-bb9f-5d24d5873aa0")
+		)
+		(pin "1"
+			(uuid "981f93a4-18ae-4052-9d2a-252f1552e4f9")
+		)
+		(instances
+			(project "mixpower-path-nano-bq25620-board-r1"
+				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/121f6246-4b7d-494d-829b-f1279d4a8ccd"
+					(reference "JP13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 166.37 87.63 270)
+		(at 168.91 86.36 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3820,7 +4314,7 @@
 		(fields_autoplaced yes)
 		(uuid "8f4a8dd2-1045-49df-a2c2-944aeef5c1bc")
 		(property "Reference" "H3"
-			(at 170.18 87.6299 90)
+			(at 172.72 86.3599 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3831,7 +4325,7 @@
 			)
 		)
 		(property "Value" "M1"
-			(at 166.3701 90.17 0)
+			(at 168.9101 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3843,7 +4337,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_ISO7380_Pad_TopBottom"
-			(at 166.37 87.63 0)
+			(at 168.91 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3854,7 +4348,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 166.37 87.63 0)
+			(at 168.91 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3865,7 +4359,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 166.37 87.63 0)
+			(at 168.91 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3879,7 +4373,7 @@
 			(uuid "4ef48f26-671c-43cc-b572-ebe943238e27")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/121f6246-4b7d-494d-829b-f1279d4a8ccd"
 					(reference "H3")
 					(unit 1)
@@ -3957,7 +4451,7 @@
 			(uuid "f5e4521b-df8c-4b95-8ae6-c73c9e8990b3")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/121f6246-4b7d-494d-829b-f1279d4a8ccd"
 					(reference "#PWR097")
 					(unit 1)
@@ -4036,7 +4530,7 @@
 			(uuid "1941d963-ec96-4562-9db9-3979b0d61130")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/121f6246-4b7d-494d-829b-f1279d4a8ccd"
 					(reference "#PWR098")
 					(unit 1)
@@ -4115,7 +4609,7 @@
 			(uuid "338e544d-b12b-4525-9013-45cdf9ad6cad")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/121f6246-4b7d-494d-829b-f1279d4a8ccd"
 					(reference "#PWR099")
 					(unit 1)
@@ -4200,7 +4694,7 @@
 			(uuid "871d8489-8a42-4cda-9f07-bd78f4e46054")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/121f6246-4b7d-494d-829b-f1279d4a8ccd"
 					(reference "J11")
 					(unit 1)
@@ -4210,7 +4704,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 166.37 77.47 270)
+		(at 168.91 60.96 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4221,7 +4715,7 @@
 		(fields_autoplaced yes)
 		(uuid "ec0ac6eb-99cf-4df5-8a8f-f2ce6620d344")
 		(property "Reference" "H1"
-			(at 170.18 77.4699 90)
+			(at 172.72 60.9599 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4232,7 +4726,7 @@
 			)
 		)
 		(property "Value" "M1"
-			(at 166.3701 80.01 0)
+			(at 168.9101 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4244,7 +4738,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_ISO7380_Pad_TopBottom"
-			(at 166.37 77.47 0)
+			(at 168.91 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4255,7 +4749,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 166.37 77.47 0)
+			(at 168.91 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4266,7 +4760,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 166.37 77.47 0)
+			(at 168.91 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4280,9 +4774,89 @@
 			(uuid "490978e4-83e8-4e12-a953-8e7e7c2dc38e")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/121f6246-4b7d-494d-829b-f1279d4a8ccd"
 					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:SolderJumper_2_Open")
+		(at 170.18 69.85 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ed79e93a-b62b-46bc-808f-a4f34b30f2bf")
+		(property "Reference" "JP14"
+			(at 170.18 64.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "H2_SHIELD_TO_GND"
+			(at 170.18 67.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm"
+			(at 170.18 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.18 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Solder Jumper, 2-pole, open"
+			(at 170.18 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "a273ccd0-c0a1-4273-b2eb-414f37d302ab")
+		)
+		(pin "1"
+			(uuid "7e10194c-2656-44fb-a7dc-0e70232407fe")
+		)
+		(instances
+			(project "mixpower-path-nano-bq25620-board-r1"
+				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/121f6246-4b7d-494d-829b-f1279d4a8ccd"
+					(reference "JP14")
 					(unit 1)
 				)
 			)

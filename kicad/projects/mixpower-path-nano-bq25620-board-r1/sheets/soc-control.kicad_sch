@@ -2168,8 +2168,8 @@
 		(uuid "19bdb460-a262-4e36-9521-cca7b5516537")
 	)
 	(rectangle
-		(start 173.99 16.51)
-		(end 252.73 134.62)
+		(start 167.64 19.05)
+		(end 246.38 124.46)
 		(stroke
 			(width 0)
 			(type dot)
@@ -2241,22 +2241,9 @@
 		)
 		(uuid "1dc18e65-e458-4639-89fb-73ccc74a7229")
 	)
-	(text "TODO: REVISE THIS WHOLE DESCRIPTION!"
+	(text "* Two main LOGICAL buses are routed throughout the board:\n\n  - USER: The USER bus is focused on controlling the board itself (SoC/MCU), e.g. setting up\n    configuration, issuing commands, retrieving collected data, etc. It has a single physical\n    bus with at most two wires, and can be multi-protocol (one chosen at a time). It can be a\n    multi-master bus, when configured as I2C.\n\n    As a rule, in this bus, the board (SoC/MCU) acts as a SLAVE, but depending on the mode of\n    operation, the bus can be used as a secondary PHER bus, or it can be just converted to\n    simple GPIOs.\n\n  - PHER: The Pheripheral bus is where the devices the board controls directly are located;\n    e.g. the fuel gauge, battery charger, miscellaneous devices like screens or EEPROMs, etc.\n    For this bus, the board (SoC/MCU) acts strictly as a MASTER, but it can be configured\n    to be multi-master. It is I2C-only.\n\n* The board operates in two distinct and fixed modes, programmable at the firmware level:\n\n  - STANDALONE: The board is meant to run without supervision. It will be configured by default\n    in SoC/MCU firmware, or if enabled, interactively via a pre-specified \"HAT\" (if supported;\n    e.g. additional EEPROM storage, screen with touch or buttons, etc.). In this mode, the board\n    acts as MASTER in both USER and PHER buses.\n\n  - MANAGED: The board is meant to be controlled by a host system. The board acts as a MASTER\n    in the PHER bus, and as a SLAVE in the USER bus.\n\n* The physical buses for PHER/USER support specific bus types, selectable at firmware level:\n\n  - USER1: I2C or UART.\n  - PHER1: I2C.\n\n  External strong pull-ups are always present, and pull to 3.3V.\n  See Pinouts on the table below.\n\n* To the MCU all lines are 5V-tolerant except for pins PA4 and PA5. However, try to avoid\n  presenting 5V on any non-5V bus.\n\n* If the MCU is configured to sleep at Standby level, it will only wake up on ~{PHER1_IRQ1}\n  or ~{USER_IRQB} assertion (low-level, on falling edge). The pins PA0 and PA2 are configured\n  as system wake-up pins at firmware level.\n\n* The ~{BTN} is the general purpose User Button. It can be used by the host for any purpose.\n  The MCU can be configured to capture when it's pressed and perform operations (e.g. notify\n  the host, change PDOs, etc. Because it's connected to BQ25620's ~QON}, it also gets the board\n  off Ship mode (if battery is present), or force a reset if pressed for 8.5 seconds."
 		(exclude_from_sim no)
-		(at 213.36 64.77 0)
-		(effects
-			(font
-				(size 2.032 2.032)
-				(thickness 0.254)
-				(bold yes)
-				(color 194 0 0 1)
-			)
-		)
-		(uuid "29fdc28f-9a54-45dd-9e6c-8d1798bf8872")
-	)
-	(text "* Two main LOGICAL buses are routed throughout the board:\n\n  - USER: The USER bus is focused on controlling the board itself (SoC/MCU), e.g. setting up\n    configuration, issuing commands, retrieving collected data, etc. It has a single physical\n    bus with at most two wires, and can be multi-protocol (one chosen at a time). It can be a\n    multi-master bus, when configured as I2C.\n\n    Also, as a rule, in this bus, the board (SoC/MCU) acts as a SLAVE, but depending on the\n    mode of operation, the bus can be used as a secondary PHER bus, or it can be just converted\n    to simple GPIOs.\n\n  - PHER: The Pheripheral bus is where the devices the board controls directly are located;\n    e.g. the fuel gauge, battery charger, miscellaneous devices like screens or EEPROMs, etc.\n    For this bus, the board (SoC/MCU) acts strictly as a MASTER. It is I2C-only.\n\n* The board operates in two distinct and fixed modes, programmable at the firmware level:\n\n  - STANDALONE: The board is meant to run without supervision. It will be configured by default\n    in SoC/MCU firmware, or if enabled, interactively via a pre-specified \"HAT\" (if supported;\n    e.g. additional EEPROM storage, screen with touch or buttons, etc.). In this mode, the board\n    acts as MASTER in both USER and PHER buses.\n\n  - MANAGED: The board is meant to be controlled by a host system. The board acts as a MASTER\n    in the PHER bus, and as a SLAVE in the USER bus.\n\n* The physical buses for PHER and USER support specific bus types, selectable at firmware level:\n\n  - USER1: I2C or UART.\n  - PHER1: I2C.\n  - PHER2: I2C or SPI.\n\n  See Pinouts on the table below.\n\n* For USER1 and PHER1, Pull-ups are always present, and pull to VCC, which can be either 3.3V\n  or 5V depending on physical board configuration. To the SoC/MCU all lines are 5V-tolerant\n  except for pins PA4 and PA5. However, try to avoid presenting 5V on any non-5V bus.\n\n* 4 initially unallocated GPIOs are available: GP1_IRQ2, GP2, GP3 and GP4. They'll generally\n  be used for the PHER buses. GP1_IRQ2 doubles as an interrupt line for peripherals when\n  necessary (e.g. touchscreens, sensors, etc.)."
-		(exclude_from_sim no)
-		(at 175.26 48.26 0)
+		(at 168.91 57.15 0)
 		(effects
 			(font
 				(size 1 1)
@@ -2431,7 +2418,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 172.72) (xy 104.14 172.72)
+			(xy 105.41 177.8) (xy 104.14 177.8)
 		)
 		(stroke
 			(width 0)
@@ -2551,7 +2538,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 180.34) (xy 120.65 180.34)
+			(xy 110.49 185.42) (xy 120.65 185.42)
 		)
 		(stroke
 			(width 0)
@@ -2681,7 +2668,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 172.72) (xy 120.65 172.72)
+			(xy 110.49 177.8) (xy 120.65 177.8)
 		)
 		(stroke
 			(width 0)
@@ -2761,7 +2748,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 165.1) (xy 104.14 165.1)
+			(xy 105.41 170.18) (xy 104.14 170.18)
 		)
 		(stroke
 			(width 0)
@@ -2881,7 +2868,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 172.72) (xy 96.52 172.72)
+			(xy 41.91 177.8) (xy 96.52 177.8)
 		)
 		(stroke
 			(width 0)
@@ -2921,7 +2908,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 180.34) (xy 104.14 180.34)
+			(xy 105.41 185.42) (xy 104.14 185.42)
 		)
 		(stroke
 			(width 0)
@@ -3121,7 +3108,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 165.1) (xy 120.65 165.1)
+			(xy 110.49 170.18) (xy 120.65 170.18)
 		)
 		(stroke
 			(width 0)
@@ -3230,14 +3217,12 @@
 			)
 		)
 		(column_widths 15.24 15.24 15.24 15.24 15.24)
-		(row_heights 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54 2.54
-			2.54 2.54
-		)
+		(row_heights 2.54 2.54 2.54 2.54 2.54)
 		(uuid "716d7de5-f318-42e7-bdcb-a6768187761a")
 		(cells
 			(table_cell "PHER Bus"
 				(exclude_from_sim no)
-				(at 175.26 97.79 0)
+				(at 168.91 110.49 0)
 				(size 76.2 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 5 1)
@@ -3257,7 +3242,7 @@
 			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 190.5 97.79 0)
+				(at 184.15 110.49 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
@@ -3278,7 +3263,7 @@
 			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 205.74 97.79 0)
+				(at 199.39 110.49 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
@@ -3299,7 +3284,7 @@
 			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 220.98 97.79 0)
+				(at 214.63 110.49 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
@@ -3320,7 +3305,7 @@
 			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 236.22 97.79 0)
+				(at 229.87 110.49 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
@@ -3341,7 +3326,7 @@
 			)
 			(table_cell "OS Port Name"
 				(exclude_from_sim no)
-				(at 175.26 100.33 0)
+				(at 168.91 113.03 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3361,7 +3346,7 @@
 			)
 			(table_cell "Bus Type"
 				(exclude_from_sim no)
-				(at 190.5 100.33 0)
+				(at 184.15 113.03 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3381,7 +3366,7 @@
 			)
 			(table_cell "Bus Line"
 				(exclude_from_sim no)
-				(at 205.74 100.33 0)
+				(at 199.39 113.03 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3401,7 +3386,7 @@
 			)
 			(table_cell "Schematic Node"
 				(exclude_from_sim no)
-				(at 220.98 100.33 0)
+				(at 214.63 113.03 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3421,7 +3406,7 @@
 			)
 			(table_cell "MCU Pin"
 				(exclude_from_sim no)
-				(at 236.22 100.33 0)
+				(at 229.87 113.03 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3441,7 +3426,7 @@
 			)
 			(table_cell "pher1_i2c2"
 				(exclude_from_sim no)
-				(at 175.26 102.87 0)
+				(at 168.91 115.57 0)
 				(size 15.24 5.08)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 2)
@@ -3462,7 +3447,7 @@
 			)
 			(table_cell "I2C"
 				(exclude_from_sim no)
-				(at 190.5 102.87 0)
+				(at 184.15 115.57 0)
 				(size 15.24 5.08)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 2)
@@ -3480,7 +3465,7 @@
 			)
 			(table_cell "SCL"
 				(exclude_from_sim no)
-				(at 205.74 102.87 0)
+				(at 199.39 115.57 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3498,7 +3483,7 @@
 			)
 			(table_cell "PHER1_SCL"
 				(exclude_from_sim no)
-				(at 220.98 102.87 0)
+				(at 214.63 115.57 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3514,9 +3499,9 @@
 				)
 				(uuid "2b91e3eb-d72f-4c04-be42-9da2bf66a2ce")
 			)
-			(table_cell "PA7 (18)"
+			(table_cell "PA9 (18)"
 				(exclude_from_sim no)
-				(at 236.22 102.87 0)
+				(at 229.87 115.57 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3534,7 +3519,7 @@
 			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 175.26 105.41 0)
+				(at 168.91 118.11 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
@@ -3555,7 +3540,7 @@
 			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 190.5 105.41 0)
+				(at 184.15 118.11 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
@@ -3573,7 +3558,7 @@
 			)
 			(table_cell "SDA"
 				(exclude_from_sim no)
-				(at 205.74 105.41 0)
+				(at 199.39 118.11 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3591,7 +3576,7 @@
 			)
 			(table_cell "PHER1_SDA"
 				(exclude_from_sim no)
-				(at 220.98 105.41 0)
+				(at 214.63 118.11 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3607,9 +3592,9 @@
 				)
 				(uuid "f05960e5-5a68-4328-a60d-097b3b715f12")
 			)
-			(table_cell "PA6 (17)"
+			(table_cell "PA10 (19)"
 				(exclude_from_sim no)
-				(at 236.22 105.41 0)
+				(at 229.87 118.11 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3625,655 +3610,9 @@
 				)
 				(uuid "6445606a-90fe-40f9-afe1-4b9f8a90f15a")
 			)
-			(table_cell "pher2_spi1"
-				(exclude_from_sim no)
-				(at 175.26 107.95 0)
-				(size 15.24 7.62)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 3)
-				(fill
-					(type color)
-					(color 255 255 194 1)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(thickness 0.2032)
-						(bold yes)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "01d3c31d-d6c6-4bcc-9f3a-f17b8f90a3bd")
-			)
-			(table_cell "SPI"
-				(exclude_from_sim no)
-				(at 190.5 107.95 0)
-				(size 15.24 7.62)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 3)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "c1bac013-53c1-4f41-9823-664119c521a6")
-			)
-			(table_cell "MOSI"
-				(exclude_from_sim no)
-				(at 205.74 107.95 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "96a61ecc-1177-48c1-8b63-172b81151ab1")
-			)
-			(table_cell "PHER2_MOSI_SCL"
-				(exclude_from_sim no)
-				(at 220.98 107.95 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 0.8 0.8)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "cbf894e1-7068-4227-8db0-904920273d8c")
-			)
-			(table_cell "PB5 (44)"
-				(exclude_from_sim no)
-				(at 236.22 107.95 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1 1)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "3310c064-3837-4be7-9dd7-f13878a41969")
-			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 175.26 110.49 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 0 0)
-				(fill
-					(type color)
-					(color 255 255 194 1)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(thickness 0.2032)
-						(bold yes)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "3310c064-3837-4be7-9dd7-f13878a41969")
-			)
-			(table_cell "rgb(252, 252, 252)"
-				(exclude_from_sim no)
-				(at 190.5 110.49 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 0 0)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "cbf894e1-7068-4227-8db0-904920273d8c")
-			)
-			(table_cell "MISO"
-				(exclude_from_sim no)
-				(at 205.74 110.49 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "96a61ecc-1177-48c1-8b63-172b81151ab1")
-			)
-			(table_cell "PHER2_MISO_SDA"
-				(exclude_from_sim no)
-				(at 220.98 110.49 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 0.8 0.8)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "c1bac013-53c1-4f41-9823-664119c521a6")
-			)
-			(table_cell "PB4 (43)"
-				(exclude_from_sim no)
-				(at 236.22 110.49 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1 1)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "01d3c31d-d6c6-4bcc-9f3a-f17b8f90a3bd")
-			)
-			(table_cell "rgb(252, 252, 252)"
-				(exclude_from_sim no)
-				(at 175.26 113.03 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 0 0)
-				(fill
-					(type color)
-					(color 255 255 194 1)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(thickness 0.2032)
-						(bold yes)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "3310c064-3837-4be7-9dd7-f13878a41969")
-			)
-			(table_cell "rgb(252, 252, 252)"
-				(exclude_from_sim no)
-				(at 190.5 113.03 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 0 0)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "cbf894e1-7068-4227-8db0-904920273d8c")
-			)
-			(table_cell "SCK"
-				(exclude_from_sim no)
-				(at 205.74 113.03 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "96a61ecc-1177-48c1-8b63-172b81151ab1")
-			)
-			(table_cell "PHER2_SCK"
-				(exclude_from_sim no)
-				(at 220.98 113.03 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 0.8 0.8)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "c1bac013-53c1-4f41-9823-664119c521a6")
-			)
-			(table_cell "PB3 (42)"
-				(exclude_from_sim no)
-				(at 236.22 113.03 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1 1)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "01d3c31d-d6c6-4bcc-9f3a-f17b8f90a3bd")
-			)
-			(table_cell "pher2_spi1_rgb"
-				(exclude_from_sim no)
-				(at 175.26 115.57 0)
-				(size 15.24 12.7)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 5)
-				(fill
-					(type color)
-					(color 255 255 194 1)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(thickness 0.2032)
-						(bold yes)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "01d3c31d-d6c6-4bcc-9f3a-f17b8f90a3bd")
-			)
-			(table_cell "SPI"
-				(exclude_from_sim no)
-				(at 190.5 115.57 0)
-				(size 15.24 12.7)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 5)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "c1bac013-53c1-4f41-9823-664119c521a6")
-			)
-			(table_cell "MOSI"
-				(exclude_from_sim no)
-				(at 205.74 115.57 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "96a61ecc-1177-48c1-8b63-172b81151ab1")
-			)
-			(table_cell "PHER2_MOSI_SCL"
-				(exclude_from_sim no)
-				(at 220.98 115.57 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 0.8 0.8)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "cbf894e1-7068-4227-8db0-904920273d8c")
-			)
-			(table_cell "PB5 (44)"
-				(exclude_from_sim no)
-				(at 236.22 115.57 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1 1)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "3310c064-3837-4be7-9dd7-f13878a41969")
-			)
-			(table_cell "rgb(252, 252, 252)"
-				(exclude_from_sim no)
-				(at 175.26 118.11 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 0 0)
-				(fill
-					(type color)
-					(color 255 255 194 1)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(thickness 0.2032)
-						(bold yes)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "3310c064-3837-4be7-9dd7-f13878a41969")
-			)
-			(table_cell "rgb(252, 252, 252)"
-				(exclude_from_sim no)
-				(at 190.5 118.11 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 0 0)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "cbf894e1-7068-4227-8db0-904920273d8c")
-			)
-			(table_cell "MISO (unused)"
-				(exclude_from_sim no)
-				(at 205.74 118.11 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "96a61ecc-1177-48c1-8b63-172b81151ab1")
-			)
-			(table_cell "PHER2_MISO_SDA"
-				(exclude_from_sim no)
-				(at 220.98 118.11 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 0.8 0.8)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "c1bac013-53c1-4f41-9823-664119c521a6")
-			)
-			(table_cell "PB4 (43)"
-				(exclude_from_sim no)
-				(at 236.22 118.11 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1 1)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "01d3c31d-d6c6-4bcc-9f3a-f17b8f90a3bd")
-			)
-			(table_cell "rgb(252, 252, 252)"
-				(exclude_from_sim no)
-				(at 175.26 120.65 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 0 0)
-				(fill
-					(type color)
-					(color 194 194 194 1)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "3310c064-3837-4be7-9dd7-f13878a41969")
-			)
-			(table_cell "rgb(252, 252, 252)"
-				(exclude_from_sim no)
-				(at 190.5 120.65 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 0 0)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "cbf894e1-7068-4227-8db0-904920273d8c")
-			)
-			(table_cell "SCK (unused)"
-				(exclude_from_sim no)
-				(at 205.74 120.65 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "96a61ecc-1177-48c1-8b63-172b81151ab1")
-			)
-			(table_cell "PHER2_SCK"
-				(exclude_from_sim no)
-				(at 220.98 120.65 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 0.8 0.8)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "c1bac013-53c1-4f41-9823-664119c521a6")
-			)
-			(table_cell "PB3 (42)"
-				(exclude_from_sim no)
-				(at 236.22 120.65 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1 1)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "01d3c31d-d6c6-4bcc-9f3a-f17b8f90a3bd")
-			)
-			(table_cell "rgb(252, 252, 252)"
-				(exclude_from_sim no)
-				(at 175.26 123.19 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 0 0)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "01d3c31d-d6c6-4bcc-9f3a-f17b8f90a3bd")
-			)
-			(table_cell "rgb(252, 252, 252)"
-				(exclude_from_sim no)
-				(at 190.5 123.19 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 0 0)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "c1bac013-53c1-4f41-9823-664119c521a6")
-			)
-			(table_cell "CS (active low)"
-				(exclude_from_sim no)
-				(at 205.74 123.19 0)
-				(size 15.24 5.08)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 2)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "96a61ecc-1177-48c1-8b63-172b81151ab1")
-			)
-			(table_cell "~{PHER2_RGB_CS} (needs to also assert ~{PHER2_RGB_EN})"
-				(exclude_from_sim no)
-				(at 220.98 123.19 0)
-				(size 15.24 5.08)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 2)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 0.8 0.8)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "cbf894e1-7068-4227-8db0-904920273d8c")
-			)
-			(table_cell "PD1 (39)"
-				(exclude_from_sim no)
-				(at 236.22 123.19 0)
-				(size 15.24 5.08)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 2)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1 1)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "3310c064-3837-4be7-9dd7-f13878a41969")
-			)
-			(table_cell "rgb(252, 252, 252)"
-				(exclude_from_sim no)
-				(at 175.26 125.73 0)
+				(at 168.91 120.65 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
@@ -4291,7 +3630,7 @@
 			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 190.5 125.73 0)
+				(at 184.15 120.65 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
@@ -4309,7 +3648,7 @@
 			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 205.74 125.73 0)
+				(at 199.39 120.65 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
@@ -4327,7 +3666,7 @@
 			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 220.98 125.73 0)
+				(at 214.63 120.65 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
@@ -4345,193 +3684,10 @@
 			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 236.22 125.73 0)
+				(at 229.87 120.65 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "01d3c31d-d6c6-4bcc-9f3a-f17b8f90a3bd")
-			)
-			(table_cell "pher2_i2c2"
-				(exclude_from_sim no)
-				(at 175.26 128.27 0)
-				(size 15.24 5.08)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 2)
-				(fill
-					(type color)
-					(color 255 255 194 1)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(thickness 0.2032)
-						(bold yes)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "01d3c31d-d6c6-4bcc-9f3a-f17b8f90a3bd")
-			)
-			(table_cell "I2C"
-				(exclude_from_sim no)
-				(at 190.5 128.27 0)
-				(size 15.24 5.08)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 2)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "c1bac013-53c1-4f41-9823-664119c521a6")
-			)
-			(table_cell "SCL"
-				(exclude_from_sim no)
-				(at 205.74 128.27 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "96a61ecc-1177-48c1-8b63-172b81151ab1")
-			)
-			(table_cell "PHER2_MOSI_SCL"
-				(exclude_from_sim no)
-				(at 220.98 128.27 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 0.762 0.762)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "cbf894e1-7068-4227-8db0-904920273d8c")
-			)
-			(table_cell "PB5 (44)"
-				(exclude_from_sim no)
-				(at 236.22 128.27 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "3310c064-3837-4be7-9dd7-f13878a41969")
-			)
-			(table_cell ""
-				(exclude_from_sim no)
-				(at 175.26 130.81 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 0 0)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "3310c064-3837-4be7-9dd7-f13878a41969")
-			)
-			(table_cell ""
-				(exclude_from_sim no)
-				(at 190.5 130.81 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 0 0)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "cbf894e1-7068-4227-8db0-904920273d8c")
-			)
-			(table_cell "SDA"
-				(exclude_from_sim no)
-				(at 205.74 130.81 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "96a61ecc-1177-48c1-8b63-172b81151ab1")
-			)
-			(table_cell "PHER2_MISO_SDA"
-				(exclude_from_sim no)
-				(at 220.98 130.81 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
-				(fill
-					(type none)
-				)
-				(effects
-					(font
-						(size 0.8 0.8)
-						(color 72 72 72 1)
-					)
-					(justify left top)
-				)
-				(uuid "c1bac013-53c1-4f41-9823-664119c521a6")
-			)
-			(table_cell "PB4 (43)"
-				(exclude_from_sim no)
-				(at 236.22 130.81 0)
-				(size 15.24 2.54)
-				(margins 0.9525 0.9525 0.9525 0.9525)
-				(span 1 1)
 				(fill
 					(type none)
 				)
@@ -4572,7 +3728,7 @@
 		(cells
 			(table_cell "USER Bus"
 				(exclude_from_sim no)
-				(at 175.26 81.28 0)
+				(at 168.91 93.98 0)
 				(size 76.2 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 5 1)
@@ -4592,7 +3748,7 @@
 			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 190.5 81.28 0)
+				(at 184.15 93.98 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
@@ -4613,7 +3769,7 @@
 			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 205.74 81.28 0)
+				(at 199.39 93.98 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
@@ -4634,7 +3790,7 @@
 			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 220.98 81.28 0)
+				(at 214.63 93.98 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
@@ -4655,7 +3811,7 @@
 			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 236.22 81.28 0)
+				(at 229.87 93.98 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
@@ -4676,7 +3832,7 @@
 			)
 			(table_cell "OS Port Name"
 				(exclude_from_sim no)
-				(at 175.26 83.82 0)
+				(at 168.91 96.52 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4696,7 +3852,7 @@
 			)
 			(table_cell "Bus Type"
 				(exclude_from_sim no)
-				(at 190.5 83.82 0)
+				(at 184.15 96.52 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4716,7 +3872,7 @@
 			)
 			(table_cell "Bus Line"
 				(exclude_from_sim no)
-				(at 205.74 83.82 0)
+				(at 199.39 96.52 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4736,7 +3892,7 @@
 			)
 			(table_cell "Schematic Node"
 				(exclude_from_sim no)
-				(at 220.98 83.82 0)
+				(at 214.63 96.52 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4756,7 +3912,7 @@
 			)
 			(table_cell "MCU Pin"
 				(exclude_from_sim no)
-				(at 236.22 83.82 0)
+				(at 229.87 96.52 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4776,7 +3932,7 @@
 			)
 			(table_cell "user1_i2c1"
 				(exclude_from_sim no)
-				(at 175.26 86.36 0)
+				(at 168.91 99.06 0)
 				(size 15.24 5.08)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 2)
@@ -4797,7 +3953,7 @@
 			)
 			(table_cell "I2C"
 				(exclude_from_sim no)
-				(at 190.5 86.36 0)
+				(at 184.15 99.06 0)
 				(size 15.24 5.08)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 2)
@@ -4815,7 +3971,7 @@
 			)
 			(table_cell "SDA"
 				(exclude_from_sim no)
-				(at 205.74 86.36 0)
+				(at 199.39 99.06 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4831,9 +3987,9 @@
 				)
 				(uuid "12fbc865-d5df-4805-81ce-71e2fa38439d")
 			)
-			(table_cell "USER1_SDA_RX"
+			(table_cell "USER1_GP1_SDA_RX"
 				(exclude_from_sim no)
-				(at 220.98 86.36 0)
+				(at 214.63 99.06 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4851,7 +4007,7 @@
 			)
 			(table_cell "PB6 (45)"
 				(exclude_from_sim no)
-				(at 236.22 86.36 0)
+				(at 229.87 99.06 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4869,7 +4025,7 @@
 			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 175.26 88.9 0)
+				(at 168.91 101.6 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
@@ -4890,7 +4046,7 @@
 			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 190.5 88.9 0)
+				(at 184.15 101.6 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
@@ -4908,7 +4064,7 @@
 			)
 			(table_cell "SCL"
 				(exclude_from_sim no)
-				(at 205.74 88.9 0)
+				(at 199.39 101.6 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4924,9 +4080,9 @@
 				)
 				(uuid "4ea1b6a2-17d1-41fe-a01c-490486be4413")
 			)
-			(table_cell "USER1_SCL_TX"
+			(table_cell "USER1_GP2_SCL_TX"
 				(exclude_from_sim no)
-				(at 220.98 88.9 0)
+				(at 214.63 101.6 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4944,7 +4100,7 @@
 			)
 			(table_cell "PB7 (46)"
 				(exclude_from_sim no)
-				(at 236.22 88.9 0)
+				(at 229.87 101.6 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -4960,9 +4116,9 @@
 				)
 				(uuid "6445606a-90fe-40f9-afe1-4b9f8a90f15a")
 			)
-			(table_cell "user1_lpuart2"
+			(table_cell "user1_usart1"
 				(exclude_from_sim no)
-				(at 175.26 91.44 0)
+				(at 168.91 104.14 0)
 				(size 15.24 5.08)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 2)
@@ -4981,9 +4137,9 @@
 				)
 				(uuid "e2e54d03-1f64-4c0a-b5f3-1cc8b4baa57e")
 			)
-			(table_cell "LPUART"
+			(table_cell "USART"
 				(exclude_from_sim no)
-				(at 190.5 91.44 0)
+				(at 184.15 104.14 0)
 				(size 15.24 5.08)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 2)
@@ -5001,7 +4157,7 @@
 			)
 			(table_cell "RX"
 				(exclude_from_sim no)
-				(at 205.74 91.44 0)
+				(at 199.39 104.14 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5017,9 +4173,9 @@
 				)
 				(uuid "e0b2d607-4f5a-4241-a0ca-50bc7ae85d4f")
 			)
-			(table_cell "USER1_SDA_RX"
+			(table_cell "USER1_GP1_SDA_RX"
 				(exclude_from_sim no)
-				(at 220.98 91.44 0)
+				(at 214.63 104.14 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5037,7 +4193,7 @@
 			)
 			(table_cell "PB6 (45)"
 				(exclude_from_sim no)
-				(at 236.22 91.44 0)
+				(at 229.87 104.14 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5055,7 +4211,7 @@
 			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 175.26 93.98 0)
+				(at 168.91 106.68 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
@@ -5075,7 +4231,7 @@
 			)
 			(table_cell "rgb(252, 252, 252)"
 				(exclude_from_sim no)
-				(at 190.5 93.98 0)
+				(at 184.15 106.68 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 0 0)
@@ -5093,7 +4249,7 @@
 			)
 			(table_cell "TX"
 				(exclude_from_sim no)
-				(at 205.74 93.98 0)
+				(at 199.39 106.68 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5109,9 +4265,9 @@
 				)
 				(uuid "96a61ecc-1177-48c1-8b63-172b81151ab1")
 			)
-			(table_cell "USER1_SCL_TX"
+			(table_cell "USER1_GP2_SCL_TX"
 				(exclude_from_sim no)
-				(at 220.98 93.98 0)
+				(at 214.63 106.68 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5129,7 +4285,7 @@
 			)
 			(table_cell "PB7 (46)"
 				(exclude_from_sim no)
-				(at 236.22 93.98 0)
+				(at 229.87 106.68 0)
 				(size 15.24 2.54)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -5158,7 +4314,7 @@
 		(uuid "01a790fd-9d6e-43dd-9007-aac506415bb6")
 	)
 	(label "LED_R"
-		(at 120.65 180.34 180)
+		(at 120.65 185.42 180)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -5288,7 +4444,7 @@
 		(uuid "90a3e543-c1a5-4331-a26e-6cd931c74789")
 	)
 	(label "LED_Y"
-		(at 120.65 165.1 180)
+		(at 120.65 170.18 180)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -5298,7 +4454,7 @@
 		(uuid "91345ccf-c0f2-4b0d-a00d-6d282980eecd")
 	)
 	(label "LED_G"
-		(at 120.65 172.72 180)
+		(at 120.65 177.8 180)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -5446,7 +4602,7 @@
 	)
 	(hierarchical_label "VLED"
 		(shape input)
-		(at 41.91 172.72 180)
+		(at 41.91 177.8 180)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -5670,7 +4826,7 @@
 			(uuid "5aa7627a-10c7-48be-9c53-413f085ecd42")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "D9")
 					(unit 1)
@@ -5753,7 +4909,7 @@
 			(uuid "e1c34daf-6653-47e8-97d5-e19cab776378")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "C37")
 					(unit 1)
@@ -5834,7 +4990,7 @@
 			(uuid "24f377be-604c-48d9-a3ea-e55a72efb4e9")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "R42")
 					(unit 1)
@@ -5914,7 +5070,7 @@
 			(uuid "5af35bec-e655-4cac-b646-939e2a218227")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "#PWR059")
 					(unit 1)
@@ -5993,7 +5149,7 @@
 			(uuid "2cc7f569-164d-4490-bd62-b3037c247dc1")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "#PWR062")
 					(unit 1)
@@ -6074,7 +5230,7 @@
 			(uuid "4f93ce19-d152-4f0c-9e7b-b2386857b7f8")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "R43")
 					(unit 1)
@@ -6105,7 +5261,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "STM32G071G8UxN"
+		(property "Value" "STM32G071G8U6N"
 			(at 97.3933 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6235,7 +5391,7 @@
 			(uuid "7b1e3784-70f8-48a6-8dc6-08963a4cb86b")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "U9")
 					(unit 1)
@@ -6316,7 +5472,7 @@
 			(uuid "bea9bf29-3ef4-4a96-9708-adef7a0c0e2d")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "R44")
 					(unit 1)
@@ -6397,7 +5553,7 @@
 			(uuid "47d14048-2eaa-47f2-a06b-3a511e5b70f5")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "R51")
 					(unit 1)
@@ -6535,7 +5691,7 @@
 			(uuid "31cc57af-9e14-4f65-bf7d-625a82f0bd29")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "Q7")
 					(unit 1)
@@ -6673,7 +5829,7 @@
 			(uuid "8171f3d1-47a0-48fd-b3a3-bbf9c11fee50")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "Q7")
 					(unit 2)
@@ -6683,7 +5839,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 107.95 172.72 90)
+		(at 107.95 177.8 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -6692,10 +5848,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "843b7a04-510f-47d8-b04a-2a192e76defb")
 		(property "Reference" "R49"
-			(at 107.95 175.26 90)
+			(at 107.95 172.72 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6704,8 +5859,8 @@
 				)
 			)
 		)
-		(property "Value" "1.5k"
-			(at 107.95 177.8 90)
+		(property "Value" "1k"
+			(at 107.95 175.26 90)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects
@@ -6715,7 +5870,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 107.95 172.72 0)
+			(at 107.95 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6726,7 +5881,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 107.95 172.72 0)
+			(at 107.95 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6737,7 +5892,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 107.95 172.72 0)
+			(at 107.95 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6754,7 +5909,7 @@
 			(uuid "e749abae-0da8-4a4c-b5a1-5461bf85dd64")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "R49")
 					(unit 1)
@@ -6833,7 +5988,7 @@
 			(uuid "01c9e516-54a7-471b-9357-ac4e0e6342d3")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "#PWR058")
 					(unit 1)
@@ -6914,7 +6069,7 @@
 			(uuid "73133c89-ea0c-40db-96af-497bcd0152e6")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "R52")
 					(unit 1)
@@ -6994,7 +6149,7 @@
 			(uuid "cb79c33f-532c-4211-be53-b34534cb6083")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "R53")
 					(unit 1)
@@ -7073,7 +6228,7 @@
 			(uuid "11900e5a-ee59-470a-824f-4ef7afe3916f")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "#PWR063")
 					(unit 1)
@@ -7154,7 +6309,7 @@
 			(uuid "23dcec9f-b7fc-488f-8c5b-dfcae0b43eae")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "R46")
 					(unit 1)
@@ -7164,7 +6319,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 107.95 165.1 90)
+		(at 107.95 170.18 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -7175,7 +6330,7 @@
 		(dnp no)
 		(uuid "ac32b4c1-5ffc-4297-867d-089daba3b525")
 		(property "Reference" "R48"
-			(at 107.95 167.64 90)
+			(at 107.95 165.1 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7184,8 +6339,8 @@
 				)
 			)
 		)
-		(property "Value" "1.5k"
-			(at 107.95 170.18 90)
+		(property "Value" "1k"
+			(at 107.95 167.64 90)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects
@@ -7195,7 +6350,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 107.95 165.1 0)
+			(at 107.95 170.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7206,7 +6361,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 107.95 165.1 0)
+			(at 107.95 170.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7217,7 +6372,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 107.95 165.1 0)
+			(at 107.95 170.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7234,7 +6389,7 @@
 			(uuid "c478c435-ac04-44c8-b7ed-3488fedb55dd")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "R48")
 					(unit 1)
@@ -7315,7 +6470,7 @@
 			(uuid "ae2d48b2-aac5-4007-830f-622a65742095")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "R47")
 					(unit 1)
@@ -7394,7 +6549,7 @@
 			(uuid "5f6d3465-288d-480b-afa3-b17740d0c9ff")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "#PWR064")
 					(unit 1)
@@ -7475,7 +6630,7 @@
 			(uuid "ba7a8e8e-59cd-4653-90cf-ed43cbe01da9")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "R45")
 					(unit 1)
@@ -7554,7 +6709,7 @@
 			(uuid "e6458c00-ac7b-4e48-8a7f-316ca06add6b")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "#PWR060")
 					(unit 1)
@@ -7564,7 +6719,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 107.95 180.34 90)
+		(at 107.95 185.42 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -7576,7 +6731,7 @@
 		(fields_autoplaced yes)
 		(uuid "d83708db-4ea1-4bb1-9d15-dedaf9cd376e")
 		(property "Reference" "R50"
-			(at 107.95 182.88 90)
+			(at 107.95 180.34 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7585,8 +6740,8 @@
 				)
 			)
 		)
-		(property "Value" "1.5k"
-			(at 107.95 185.42 90)
+		(property "Value" "1k"
+			(at 107.95 182.88 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7596,7 +6751,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 107.95 180.34 0)
+			(at 107.95 185.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7607,7 +6762,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 107.95 180.34 0)
+			(at 107.95 185.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7618,7 +6773,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 107.95 180.34 0)
+			(at 107.95 185.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7635,7 +6790,7 @@
 			(uuid "876fe0c5-9602-4432-ab62-a1e144676d5b")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "R50")
 					(unit 1)
@@ -7718,7 +6873,7 @@
 			(uuid "7ff56289-5f07-42f8-8014-858565ed186c")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "C36")
 					(unit 1)
@@ -7798,7 +6953,7 @@
 			(uuid "40395b94-26f4-4d1f-a0a2-af0892d64265")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "#PWR061")
 					(unit 1)
@@ -7808,7 +6963,7 @@
 	)
 	(symbol
 		(lib_id "mixlib-discrete-led:TJ-S1615CY6TGLCCYRGY-A5")
-		(at 101.6 172.72 0)
+		(at 101.6 177.8 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -7819,7 +6974,7 @@
 		(dnp no)
 		(uuid "f967b8b9-1b23-43c8-928e-bde0bbc87b19")
 		(property "Reference" "U10"
-			(at 84.2645 165.1 0)
+			(at 84.2645 170.18 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7829,7 +6984,7 @@
 			)
 		)
 		(property "Value" "TJ-S1615CY6TGLCCYRGY-A5"
-			(at 84.2645 167.64 0)
+			(at 84.2645 172.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7839,7 +6994,7 @@
 			)
 		)
 		(property "Footprint" "mixlib-discrete-led:LED-3_RGB-0603_1615Metric"
-			(at 101.6 172.72 0)
+			(at 101.6 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7850,7 +7005,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/C42389950.pdf"
-			(at 101.6 172.72 0)
+			(at 101.6 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7861,7 +7016,7 @@
 			)
 		)
 		(property "Description" "Common-Anode Discrete RGB LED, 0605 / 1615"
-			(at 101.6 172.72 0)
+			(at 101.6 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7884,7 +7039,7 @@
 			(uuid "2c5376d3-8021-4ab1-928a-9350b57db649")
 		)
 		(instances
-			(project "mixpower-path-mini-bq25620-board-r1"
+			(project "mixpower-path-nano-bq25620-board-r1"
 				(path "/2e43857b-9bf9-460c-948c-ec2cf8a8d6b4/086f65f2-117f-4f65-a186-a8b21110dce9"
 					(reference "U10")
 					(unit 1)

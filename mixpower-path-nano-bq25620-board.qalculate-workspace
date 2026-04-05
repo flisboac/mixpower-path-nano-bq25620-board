@@ -1,0 +1,244 @@
+QALCULATE WORKSPACE FILE
+
+[General]
+version=5.9.0
+keypad_type=0
+show_keypad=1
+hide_numpad=0
+show_custom_keypad_column=0
+show_bases=0
+
+[Mode]
+min_deci=0
+use_min_deci=0
+max_deci=2
+use_max_deci=0
+precision=10
+interval_display=0
+min_exp=-1
+negative_exponents=0
+sort_minus_last=1
+number_fraction_format=-1
+complex_number_form=0
+use_prefixes=1
+use_prefixes_for_all_units=0
+use_prefixes_for_currencies=0
+use_binary_prefixes=0
+prefixes_default=1
+abbreviate_names=1
+all_prefixes_enabled=0
+denominator_prefix_enabled=1
+place_units_separately=1
+auto_post_conversion=3
+mixed_units_conversion=3
+number_base=10
+number_base_expression=10
+read_precision=0
+assume_denominators_nonzero=1
+warn_about_denominators_assumed_nonzero=1
+structuring=1
+angle_unit=1
+functions_enabled=1
+variables_enabled=1
+calculate_functions=1
+calculate_variables=1
+variable_units_enabled=1
+sync_units=1
+unknownvariables_enabled=0
+units_enabled=1
+allow_complex=1
+allow_infinite=1
+indicate_infinite_series=0
+show_ending_zeroes=1
+rounding_mode=0
+approximation=-1
+concise_uncertainty_input=0
+interval_calculation=1
+rpn_mode=0
+chain_mode=0
+limit_implicit_multiplication=0
+parsing_mode=0
+simplified_percentage=-1
+spacious=1
+excessive_parenthesis=0
+default_assumption_type=4
+default_assumption_sign=0
+
+[History]
+history_time=1775357226
+history_expression=3.7/15
+history_parse=<span style="color:#005858">3.7</span> ∕ <span style="color:#005858">15</span>
+history_result_approximate=<span style="color:#005858">0.246 666 666 7</span>
+history_time=1775357240
+history_expression=D=3.7/15
+history_parse=save(<span style="color:#005858">3.7</span> ∕ <span style="color:#005858">15</span>, <span style="color:#585800"><i class="symbol">D</i></span>, <span style="color:#585800"><i class="symbol">Temporary</i></span>, <span style="color:#585800"><i class="symbol"></i></span>, <span style="color:#005858">1</span>)
+history_result_approximate=<span style="color:#005858">0.246 666 666 7</span>
+history_time=1775357716
+history_expression=V_in = 15V
+history_parse=save(<span style="color:#005858">15</span> <span style="color:#008000">volts</span>, <span style="color:#585800"><i class="symbol">V_in</i></span>, <span style="color:#585800"><i class="symbol">Temporary</i></span>, <span style="color:#585800"><i class="symbol"></i></span>, <span style="color:#005858">1</span>)
+history_result=<span style="color:#005858">15</span> <span style="color:#008000">V</span>
+history_time=1775357772
+history_expression=V_bat = 3.7V
+history_parse=save(<span style="color:#005858">3.7</span> <span style="color:#008000">volts</span>, <span style="color:#585800"><i class="symbol">V_bat</i></span>, <span style="color:#585800"><i class="symbol">Temporary</i></span>, <span style="color:#585800"><i class="symbol"></i></span>, <span style="color:#005858">1</span>)
+history_result=<span style="color:#005858">3.7</span> <span style="color:#008000">V</span>
+history_time=1775357779
+history_expression=D = V_bat / V_in
+history_parse=save(<span style="color:#585800">V<sub>bat</sub></span> ∕ <span style="color:#585800">V<sub>in</sub></span>, <span style="color:#585800"><i class="symbol">D</i></span>, <span style="color:#585800"><i class="symbol">Temporary</i></span>, <span style="color:#585800"><i class="symbol">D</i></span>, <span style="color:#005858">1</span>)
+history_result=<span style="color:#005858">37 ∕ 150</span>
+history_result_approximate=<span style="color:#005858">0.246 666 666 7</span>
+history_time=1775357810
+history_expression=fs = 1.5MHz
+history_parse=save(<span style="color:#005858">1.5</span> <span style="color:#008000">megahertz</span>, <span style="color:#585800"><i class="symbol">fs</i></span>, <span style="color:#585800"><i class="symbol">Temporary</i></span>, <span style="color:#585800"><i class="symbol"></i></span>, <span style="color:#005858">1</span>)
+history_result=<span style="color:#005858">1.5</span> <span style="color:#008000">MHz</span>
+history_time=1775357812
+history_expression=fs = 1.5MHz
+history_parse=save(<span style="color:#005858">1.5</span> <span style="color:#008000">megahertz</span>, <span style="color:#585800"><i class="symbol">fs</i></span>, <span style="color:#585800"><i class="symbol">Temporary</i></span>, <span style="color:#585800"><i class="symbol">fs</i></span>, <span style="color:#005858">1</span>)
+history_result=<span style="color:#005858">1.5</span> <span style="color:#008000">MHz</span>
+history_time=1775357847
+history_expression=L = 1uH
+history_parse=save(<span style="color:#005858">1</span> <span style="color:#008000">microhenry</span>, <span style="color:#585800"><i class="symbol">L</i></span>, <span style="color:#585800"><i class="symbol">Temporary</i></span>, <span style="color:#585800"><i class="symbol">L</i></span>, <span style="color:#005858">1</span>)
+history_result=<span style="color:#005858">1</span> <span style="color:#008000">μH</span>
+history_time=1775357881
+history_expression=I_ripple = (V_in × D × (1−D))/(fs × L)
+history_parse=save((<span style="color:#585800">V<sub>in</sub></span> × <span style="color:#585800">D</span> × (<span style="color:#005858">1</span> − <span style="color:#585800">D</span>)) ∕ (<span style="color:#585800">fs</span> <span style="color:#008000">liters</span>), <span style="color:#585800"><i class="symbol">I_ripple</i></span>, <span style="color:#585800"><i class="symbol">Temporary</i></span>, <span style="color:#585800"><i class="symbol"></i></span>, <span style="color:#005858">1</span>)
+history_result_approximate=<span style="color:#005858">1.858 222 222</span> <span style="color:#008000">mPa ∕ A</span>
+history_time=1775358125
+history_expression=2.655/2
+history_parse=<span style="color:#005858">2.655</span> ∕ <span style="color:#005858">2</span>
+history_result=<span style="color:#005858">1.3275</span>
+history_time=1775368873
+history_expression=I_chg = 3A
+history_parse=save(<span style="color:#005858">3</span> <span style="color:#008000">amperes</span>, <span style="color:#585800"><i class="symbol">I_chg</i></span>, <span style="color:#585800"><i class="symbol">Temporary</i></span>, <span style="color:#585800"><i class="symbol"></i></span>, <span style="color:#005858">1</span>)
+history_result=<span style="color:#005858">3</span> <span style="color:#008000">A</span>
+history_time=1775368896
+history_expression=I_cin = I_chg × sqrt(D × (1 − D))
+history_parse=save(<span style="color:#585800">I<sub>chg</sub></span> × sqrt(<span style="color:#585800">D</span> × (<span style="color:#005858">1</span> − <span style="color:#585800">D</span>)), <span style="color:#585800"><i class="symbol">I_cin</i></span>, <span style="color:#585800"><i class="symbol">Temporary</i></span>, <span style="color:#585800"><i class="symbol"></i></span>, <span style="color:#005858">1</span>)
+history_result_approximate=<span style="color:#005858">1.293 213 053</span> <span style="color:#008000">A</span>
+history_time=1775369236
+history_expression=I_ripple = (V_in × 0.5 × (1−0.5)) / (1.5e6 × (1e−6×0.7))
+history_parse=save((<span style="color:#585800">V<sub>in</sub></span> × <span style="color:#005858">0.5</span> × (<span style="color:#005858">1</span> − <span style="color:#005858">0.5</span>)) ∕ ((<span style="color:#005858">1.5</span> × <span style="color:#005858">10</span><sup><span style="color:#005858">6</span></sup>) × ((<span style="color:#005858">1</span> × <span style="color:#005858">10</span><sup>−<span style="color:#005858">6</span></sup>) × <span style="color:#005858">0.7</span>)), <span style="color:#585800"><i class="symbol">I_ripple</i></span>, <span style="color:#585800"><i class="symbol">Temporary</i></span>, <span style="color:#585800"><i class="symbol">I_ripple</i></span>, <span style="color:#005858">1</span>)
+history_result_approximate=<span style="color:#005858">3.571 428 571</span> <span style="color:#008000">V</span>
+history_time=1775369265
+history_expression=I_chg + (I_ripple / 2)
+history_parse=<span style="color:#585800">I<sub>chg</sub></span> + (<span style="color:#585800">I<sub>ripple</sub></span> ∕ <span style="color:#005858">2</span>)
+history_result_approximate=<span style="color:#005858">3</span> <span style="color:#008000">A</span> + <span style="color:#005858">1.785 714 286</span> <span style="color:#008000">V</span>
+history_time=1775369279
+history_expression=I_ripple = (15 × 0.5 × (1−0.5)) / (1.5e6 × (1e−6×0.7)) × A
+history_parse=save(((<span style="color:#005858">15</span> × <span style="color:#005858">0.5</span> × (<span style="color:#005858">1</span> − <span style="color:#005858">0.5</span>)) ∕ ((<span style="color:#005858">1.5</span> × <span style="color:#005858">10</span><sup><span style="color:#005858">6</span></sup>) × ((<span style="color:#005858">1</span> × <span style="color:#005858">10</span><sup>−<span style="color:#005858">6</span></sup>) × <span style="color:#005858">0.7</span>))) <span style="color:#008000">amperes</span>, <span style="color:#585800"><i class="symbol">I_ripple</i></span>, <span style="color:#585800"><i class="symbol">Temporary</i></span>, <span style="color:#585800"><i class="symbol">I_ripple</i></span>, <span style="color:#005858">1</span>)
+history_result_approximate=<span style="color:#005858">3.571 428 571</span> <span style="color:#008000">A</span>
+history_time=1775369282
+history_expression=I_chg + (I_ripple / 2)
+history_parse=<span style="color:#585800">I<sub>chg</sub></span> + (<span style="color:#585800">I<sub>ripple</sub></span> ∕ <span style="color:#005858">2</span>)
+history_result_approximate=<span style="color:#005858">4.785 714 286</span> <span style="color:#008000">A</span>
+history_time=1775369524
+history_expression=I_cout = (I_ripple/(2×sqrt(3)))
+history_parse=save(<span style="color:#585800">I<sub>ripple</sub></span> ∕ (<span style="color:#005858">2</span> × sqrt(<span style="color:#005858">3</span>)), <span style="color:#585800"><i class="symbol">I_cout</i></span>, <span style="color:#585800"><i class="symbol">Temporary</i></span>, <span style="color:#585800"><i class="symbol"></i></span>, <span style="color:#005858">1</span>)
+history_result_approximate=<span style="color:#005858">1.030 982 624</span> <span style="color:#008000">A</span>
+history_time=1775369703
+history_expression=D_1 = ((3.3−3)/3.3)
+history_parse=save((<span style="color:#005858">3.3</span> − <span style="color:#005858">3</span>) ∕ <span style="color:#005858">3.3</span>, <span style="color:#585800"><i class="symbol">D_1</i></span>, <span style="color:#585800"><i class="symbol">Temporary</i></span>, <span style="color:#585800"><i class="symbol"></i></span>, <span style="color:#005858">1</span>)
+history_result_approximate=<span style="color:#005858">0.090 909 090 91</span>
+history_time=1775370024
+history_expression=3/(0.9×(1−D_1))+((3.3×D_1)/(2×2.1e6×(470e−9)))
+history_parse=(<span style="color:#005858">3</span> ∕ (<span style="color:#005858">0.9</span> × (<span style="color:#005858">1</span> − <span style="color:#585800">D<sub>1</sub></span>))) + ((<span style="color:#005858">3.3</span> × <span style="color:#585800">D<sub>1</sub></span>) ∕ (<span style="color:#005858">2</span> × (<span style="color:#005858">2.1</span> × <span style="color:#005858">10</span><sup><span style="color:#005858">6</span></sup>) × (<span style="color:#005858">470</span> × <span style="color:#005858">10</span><sup>−<span style="color:#005858">9</span></sup>)))
+history_result_approximate=<span style="color:#005858">3.818 642 351</span>
+history_time=1775370030
+history_expression=D_1 = ((3.3−2.7)/3.3)
+history_parse=save((<span style="color:#005858">3.3</span> − <span style="color:#005858">2.7</span>) ∕ <span style="color:#005858">3.3</span>, <span style="color:#585800"><i class="symbol">D_1</i></span>, <span style="color:#585800"><i class="symbol">Temporary</i></span>, <span style="color:#585800"><i class="symbol">D_1</i></span>, <span style="color:#005858">1</span>)
+history_result_approximate=<span style="color:#005858">0.181 818 181 8</span>
+history_time=1775370034
+history_expression=3/(0.9×(1−D_1))+((3.3×D_1)/(2×2.1e6×(470e−9)))
+history_parse=(<span style="color:#005858">3</span> ∕ (<span style="color:#005858">0.9</span> × (<span style="color:#005858">1</span> − <span style="color:#585800">D<sub>1</sub></span>))) + ((<span style="color:#005858">3.3</span> × <span style="color:#585800">D<sub>1</sub></span>) ∕ (<span style="color:#005858">2</span> × (<span style="color:#005858">2.1</span> × <span style="color:#005858">10</span><sup><span style="color:#005858">6</span></sup>) × (<span style="color:#005858">470</span> × <span style="color:#005858">10</span><sup>−<span style="color:#005858">9</span></sup>)))
+history_result_approximate=<span style="color:#005858">4.378 025 442</span>
+expression_history=3/(0.9×(1−D_1))+((3.3×D_1)/(2×2.1e6×(470e−9)))
+expression_history=D_1 = ((3.3−2.7)/3.3)
+expression_history=D_1 = ((3.3−3)/3.3)
+expression_history=I_cout = (I_ripple/(2×sqrt(3)))
+expression_history=I_chg + (I_ripple / 2)
+expression_history=I_ripple = (15 × 0.5 × (1−0.5)) / (1.5e6 × (1e−6×0.7)) × A
+expression_history=I_ripple = (V_in × 0.5 × (1−0.5)) / (1.5e6 × (1e−6×0.7))
+expression_history=I_cin = I_chg × sqrt(D × (1 − D))
+expression_history=I_chg = 3A
+expression_history=2.655/2
+expression_history=I_ripple = (V_in × D × (1−D))/(fs × L)
+expression_history=L = 1uH
+expression_history=fs = 1.5MHz
+expression_history=D = V_bat / V_in
+expression_history=V_bat = 3.7V
+expression_history=V_in = 15V
+expression_history=D=3.7/15
+expression_history=3.7/15
+expression_history=2.5V / 10kOhm
+expression_history=50V / 10kOhm
+expression_history=10 uV / 0.015 Ohm
+expression_history=sqrt(2 W / 0.015 Ohm)
+expression_history=sqrt(2 W / 0.02 Ohm)
+expression_history=10 uV / 0.02 Ohm
+expression_history=10 uV × 25
+expression_history=10 uV / 10000 Ohm
+expression_history=165 nC × 15 mA
+expression_history=50/200000
+expression_history=50 mA × 100 Ohm
+expression_history=50 mA × 100
+expression_history=5×20
+expression_history=50/5
+expression_history=5V × 50
+expression_history=10 uA × 100
+expression_history=20 uA × 0.5 Ohm
+expression_history=10 uA × 1 Ohm
+expression_history=1 uA × 10 Ohm
+expression_history=find_R1(15 k Ohm)
+expression_history=find_R2(r3) = ((V2 − V1) / V1) / \x
+expression_history=find_R1(r3) = ((Vin − V2) / V1) / \x
+expression_history=find_R2() = ((V2 − V1) / V1) / R3
+expression_history=find_R1() = ((Vin − V2) / V1) / R3
+expression_history=R2 = ((V2 − V1) / V1) / R3
+expression_history=R1 = ((Vin − V2) / V1) / R3
+expression_history=V2 = 13.5V
+expression_history=V1 = 0.9V
+expression_history=R1 = (Vin − V2) / V1
+expression_history=V2 = 0.9 V
+expression_history=V1 = 13.5 V
+expression_history=Vin = 50 V
+expression_history=r3 = 15 k Ohm
+expression_history=0.6 × (1 + ((1.2M Ohm + 120k Ohm) / 56k Ohm))
+expression_history=(( 15V / 0.6V ) − 1) × 56k Ohm
+expression_history=0.6 × (1 + (240k Ohm / 10kk Ohm))
+expression_history=(( 15V / 0.6V ) − 1) × 10k Ohm
+expression_history=40.96mV / 1000.02 Ohm
+expression_history=15000 Ohm × 1uV
+expression_history=0.01 Ohm × 1nA
+expression_history=0.01 Ohm × 5^2A
+expression_history=1nA × 10 kOhm
+expression_history=1nA × 100 Ohm
+expression_history=f(1)
+expression_history=f(x) := \x  × 2 where x >= 0
+expression_history=f(x) := x  × 2 where x >= 0
+expression_history=(26.162/2)−(10.640/2)
+expression_history=bq25672IrippleBuck(4.6, 24, 1.5M, 1 micro)
+expression_history=bq25672IrippleBuck(4.6, 24, 1.5M, 4 micro)
+expression_history=bq25672IrippleBuck(4.6, 24, 1.5M, 1u)
+expression_history=bq25672IrippleBuck(bq25672IrippleBuck(4.6 V, 24 V, 1.5 MHz, 1 μH), 24, 1.5M, 1u)
+expression_history=bq25672IrippleBuck(4.6V, 24V, 1.5MHz, 1uH)
+expression_history=bq25672IrippleBuck()
+expression_history=bq25672IrippleBuck(bq25672IrippleBuck())
+expression_history=Vsys = 4.6V
+expression_history=Vbus = 24V
+expression_history=Fsw = 1.5MHz
+expression_history=Fsw = 1.5Mhz
+expression_history=Iripple_buck = (Vsys × (Vbus − Vsys)) / (Vbus × Fsw × L)
+expression_history=(2/(0.8×(1−d)))+((2.5×d)/(2×2400000×0.000001))
+expression_history=d = 1 − ((2.5×0.8)/5)
+expression_history=D = 1 − ((2.5×0.8)/5)
+expression_history=vfb = 500 mV
+expression_history=vfb = 500 m V
+expression_history=r1 = 1 M ohm
+expression_history=vout = 5 V
+expression_history=vout 5 V
+expression_history=vout = 5 ohm
+expression_history=vout = 5
+expression_history=5/200000
+
+[Definitions]
+<?xml version="1.0"?>
+<QALCULATE version="5.9.0"><category><title>Temporary</title><variable><names>v_offset_min</names><value>(1/100000) V</value></variable><variable><names>as:v_ref</names><value>5 V</value></variable><variable><title>D_drop</title><names>as:D_drop</names><value>(1/2) V</value></variable><variable><title>Vin_min</title><names>s:Vin_min</names><value>(33/10) V</value></variable><variable><names>s:Vout_min</names><value>9 V</value></variable><variable><title>Iin_max</title><names>s:Iin_max</names><value>2 A</value></variable><variable><names>s:Iout_max</names><value>A</value></variable><variable><names>a:n</names><value>9/10</value></variable><variable><names>t_freq_delay</names><value>(89/1000000000) s</value></variable><variable><title>L</title><names>a:L</names><value>(1/1000000) H</value></variable><variable><title>D</title><names>a:D</names><value>37/150</value></variable><variable><names>as:V_in</names><value>15 V</value></variable><variable><names>as:V_bat</names><value>(37/10) V</value></variable><variable><title>fs</title><names>fs</names><value>1500000 Hz</value></variable><variable><title>I_ripple</title><names>as:I_ripple</names><value>(25/7) A</value></variable><variable><names>as:I_chg</names><value>3 A</value></variable><variable><names>as:I_cin</names><value>interval(1.29321305282617682059917527846936629404797, 1.29321305282617682059917527846936629404835) A</value></variable><variable><names>as:I_cout</names><value>interval(1.03098262355290315090919425089635259937056, 1.03098262355290315090919425089635259937094) A</value></variable><variable><title>D_1</title><names>as:D_1</names><value>2/11</value></variable></category></QALCULATE>

@@ -5,8 +5,8 @@ set -me
 own_dir="$(dirname "$(realpath -s "$0")")"
 max_jobs="4"
 num_jobs="0"
-dpi="400"
-jpg_dpi="600"
+dpi="600"
+jpg_dpi="800"
 
 # convert_file() (
 #   local input_file="$1"
@@ -59,7 +59,7 @@ find "${own_dir}" -name '*.svg' | while read input_file; do
       -o "${png_output_file}" \
       "${input_file}"
     magick \
-      -quality 75 \
+      -quality 90 \
       "${png_output_file}" \
       "${jpg_output_file}"
 
